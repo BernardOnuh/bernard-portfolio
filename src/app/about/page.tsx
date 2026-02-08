@@ -121,6 +121,86 @@ export default function About() {
           </p>
         </div>
 
+        {/* Education */}
+        <div className="pt-4">
+          <h2 className="text-2xl font-heading text-foreground mb-8">Education</h2>
+          <div className="space-y-6">
+            <div className="group p-6 border border-theme rounded-lg hover:border-accent/50 transition-all duration-300">
+              <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
+                Bachelor&apos;s of Science, Computer Science
+              </h3>
+              <p className="text-sm text-muted mt-1 mb-3">University · 2017 - 2022</p>
+              <p className="text-muted leading-relaxed text-sm">
+                Studied core computer science fundamentals including data structures, algorithms, software engineering,
+                computer networks, and distributed systems. This foundation shaped my approach to building scalable
+                blockchain applications.
+              </p>
+            </div>
+
+            <div className="group p-6 border border-theme rounded-lg hover:border-accent/50 transition-all duration-300">
+              <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
+                Web3 & Blockchain Self-Study
+              </h3>
+              <p className="text-sm text-muted mt-1 mb-3">Ongoing · 2020 - Present</p>
+              <p className="text-muted leading-relaxed text-sm">
+                Deep-dived into Solidity, smart contract development, EVM architecture, Layer 2 solutions,
+                and cross-chain protocols. Learned by building — shipping dApps, winning hackathons, and
+                contributing to open-source blockchain projects.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Skills */}
+        <div className="pt-4">
+          <h2 className="text-2xl font-heading text-foreground mb-8">Skills</h2>
+          <div className="space-y-10">
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-4">Technical Skills</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Solidity', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Rust', 'Smart Contracts', 'EVM', 'Hardhat', 'Foundry', 'Ethers.js', 'Web3.js', 'The Graph', 'IPFS', 'REST APIs', 'GraphQL', 'Git', 'Docker', 'Tailwind CSS'].map((skill) => (
+                  <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-4">Blockchain & Web3</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Ethereum', 'Polygon', 'Base', 'Stacks', 'LayerZero', 'Wormhole', 'DeFi', 'NFTs', 'DAOs', 'Cross-chain', 'Token Standards', 'Wallet Integration', 'dApp Development', 'Smart Contract Auditing'].map((skill) => (
+                  <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-4">Community & DevRel</h3>
+              <div className="flex flex-wrap gap-2">
+                {['Developer Relations', 'Community Building', 'Technical Writing', 'Public Speaking', 'Workshop Facilitation', 'Event Planning', 'Developer Onboarding', 'Content Creation', 'Social Media', 'Discord', 'Telegram'].map((skill) => (
+                  <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-medium text-foreground mb-4">Tools</h3>
+              <div className="flex flex-wrap gap-2">
+                {['VS Code', 'GitHub', 'Vercel', 'Notion', 'Figma', 'Postman', 'Remix IDE', 'MetaMask', 'Alchemy', 'Infura', 'Etherscan', 'Dune Analytics', 'Linux', 'Slack', 'Jira'].map((skill) => (
+                  <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Quick stats */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 border-t border-theme">
           <div>
