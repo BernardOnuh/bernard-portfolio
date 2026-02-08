@@ -6,18 +6,16 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        background: '#0a0a0a',
-        foreground: '#ffffff',
-        muted: '#6b7280',
-        accent: '#FC6432',
-        'accent-secondary': '#E8B931',
+        accent: '#06B6D4', // light cyan/blue
+        'accent-hover': '#22D3EE',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
-        'serif': ['Playfair Display', 'serif'],
+        'sans': ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'heading': ['var(--font-cabinet)', 'var(--font-inter)', 'system-ui', 'sans-serif'],
       },
     },
   },
