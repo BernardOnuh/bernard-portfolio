@@ -129,11 +129,16 @@ export default function About() {
               <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
                 Bachelor of Technology, Software Engineering
               </h3>
-              <p className="text-sm text-muted mt-1 mb-3">2019 - 2024</p>
+              <p className="text-sm text-muted mt-1 mb-3">
+                <Link href="https://www.futa.edu.ng/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+                  Federal University of Technology Akure (FUTA)
+                </Link>{' '}
+                · 2019 - 2024
+              </p>
               <p className="text-muted leading-relaxed text-sm">
-                Graduated with excellent grades, top of the class. Studied software engineering fundamentals
-                including data structures, algorithms, system design, and distributed systems — building a
-                strong foundation for shipping scalable blockchain applications.
+                Graduated with excellent grades, top of the class, from Nigeria&apos;s best technology university.
+                Studied software engineering fundamentals including data structures, algorithms, system design,
+                and distributed systems — building a strong foundation for shipping scalable blockchain applications.
               </p>
             </div>
 
