@@ -2,74 +2,112 @@ import Link from 'next/link'
 
 export default function About() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-20">
+    <div className="max-w-2xl mx-auto px-4 py-16 md:py-24">
       <div className="space-y-8">
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold font-serif mb-6">About</h1>
+          <h1 className="text-3xl md:text-4xl font-heading mb-6">About</h1>
           <p className="text-muted text-lg leading-relaxed">
-            A passionate software engineer and community builder shaping the future of blockchain technology across West Africa.
+            Software Engineer building blockchain products, Community Builder, and Developer Relations professional.
           </p>
         </div>
 
-        <div className="space-y-6 text-muted leading-relaxed">
+        <div className="space-y-6 text-muted leading-relaxed text-base md:text-[17px]">
           <p>
-            I'm a <span className="accent-glow font-medium">Software Engineer</span> with a deep focus on blockchain and Web3 technologies. Over the past 5 years, I've immersed myself in the crypto/web3 space, building innovative products and fostering vibrant communities across West Africa.
+            I&apos;m a <span className="accent-glow">Software Engineer</span> with a deep focus on
+            blockchain and Web3 technologies. Over the past 5 years, I&apos;ve worn many hats — building
+            products, growing communities, and helping developers navigate the onchain world.
           </p>
-          
+
           <p>
-            My journey began with a curiosity about decentralized systems and has evolved into a mission to make blockchain technology more accessible and impactful in Africa. I believe in the transformative power of decentralized technologies and their potential to create new opportunities for economic empowerment.
+            I&apos;m an anxious but action-oriented learner. I live by the quote:{' '}
+            <em className="text-foreground/80">&ldquo;Learn, Build, and Earn.&rdquo;</em> I believe
+            in learning by doing, staying curious, and taking bold steps to turn ideas into reality.
           </p>
-          
+
+          <h2 className="text-xl font-heading text-foreground pt-4">What I&apos;ve Built</h2>
+
           <p>
-            As a <span className="accent-glow font-medium">Community Builder</span>, I've had the privilege of working with some of the most influential organizations in the space. Through{' '}
-            <Link 
-              href="https://polygon.technology/" 
-              className="link-dotted text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            I&apos;ve shipped products that have processed <span className="text-foreground font-medium">300+ transactions</span>,
+            served <span className="text-foreground font-medium">100+ users</span>, and handled
+            over <span className="text-foreground font-medium">$20,000</span> in volume. From smart
+            contracts to full-stack dApps — I build things that people actually use.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Communities & Contributions</h2>
+
+          <p>
+            Through{' '}
+            <Link href="https://polygon.technology/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Polygon Africa
-            </Link>
-            , I helped grow and nurture developer communities, organized educational events, and facilitated workshops that bridged the gap between traditional tech and blockchain innovation.
+            </Link>, I helped grow developer communities, organized educational events, and ran workshops
+            bridging traditional tech and blockchain innovation.
           </p>
-          
+
           <p>
             My work with{' '}
-            <Link 
-              href="https://onchainglobal.com/" 
-              className="link-dotted text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href="https://onchainglobal.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Onchain Global
-            </Link>
-            {' '}focuses on developer education and advocacy, where I create content, conduct workshops, and help developers understand and build with cutting-edge blockchain technologies.
+            </Link>{' '}
+            focuses on developer education and advocacy — creating content, conducting workshops, and
+            helping developers build with cutting-edge blockchain technologies.
           </p>
-          
+
           <p>
-            Currently, I'm involved with{' '}
-            <Link 
-              href="https://basedwestafrica.com/" 
-              className="link-dotted text-foreground"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            With{' '}
+            <Link href="https://base.org/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              Base
+            </Link>{' '}and{' '}
+            <Link href="https://basedwestafrica.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Based West Africa
+            </Link>, I&apos;m building a thriving ecosystem around the Base blockchain in West Africa —
+            connecting developers, entrepreneurs, and innovators passionate about going onchain.
+          </p>
+
+          <p>
+            At{' '}
+            <Link href="#" className="link-dotted text-foreground/90">
+              Web3Nova
+            </Link>, I continue to push the boundaries of what&apos;s possible in the African blockchain space.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Developer Onboarding</h2>
+
+          <p>
+            I&apos;ve onboarded <span className="text-foreground font-medium">200+ developers</span> to
+            blockchain so far — and I&apos;m still onboarding more. Teaching and mentoring is a core part
+            of who I am. If you&apos;re looking to get started in Web3, I&apos;m happy to help.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Let&apos;s Connect</h2>
+
+          <p>
+            I&apos;m always excited to connect with fellow builders, innovators, and anyone passionate
+            about decentralized technologies. Whether it&apos;s collaborating on a project, exploring
+            new opportunities, or just chatting about the future of Web3 —{' '}
+            <Link href="https://calendly.com/bernardonuh" className="link-dotted text-accent font-medium" target="_blank" rel="noopener noreferrer">
+              let&apos;s chat ↗
             </Link>
-            , where we're building a thriving ecosystem around Base blockchain in West Africa, connecting developers, entrepreneurs, and innovators who are passionate about onchain possibilities.
           </p>
-          
-          <p>
-            I'm a self-described <span className="accent-glow font-medium">"anxious learner and action taker"</span> – I believe in learning by doing, staying curious, and taking bold steps to turn ideas into reality. Whether it's building smart contracts, developing dApps, or organizing community events, I approach every project with enthusiasm and a commitment to excellence.
-          </p>
-          
-          <p>
-            When I'm not coding or building communities, you can find me exploring new technologies, contributing to open-source projects, or sharing insights about the evolving blockchain landscape through various platforms.
-          </p>
-          
-          <p>
-            I'm always excited to connect with fellow builders, innovators, and anyone passionate about the potential of decentralized technologies. Feel free to reach out – I'd love to discuss opportunities, collaborate on projects, or simply chat about the future of Web3.
-          </p>
+        </div>
+
+        {/* Quick stats */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-theme">
+          <div>
+            <p className="text-2xl font-heading text-foreground">5+</p>
+            <p className="text-xs text-muted mt-1 uppercase tracking-wide">Years in Web3</p>
+          </div>
+          <div>
+            <p className="text-2xl font-heading text-foreground">200+</p>
+            <p className="text-xs text-muted mt-1 uppercase tracking-wide">Devs Onboarded</p>
+          </div>
+          <div>
+            <p className="text-2xl font-heading text-foreground">300+</p>
+            <p className="text-xs text-muted mt-1 uppercase tracking-wide">Transactions</p>
+          </div>
+          <div>
+            <p className="text-2xl font-heading text-foreground">$20K+</p>
+            <p className="text-xs text-muted mt-1 uppercase tracking-wide">Volume</p>
+          </div>
         </div>
       </div>
     </div>

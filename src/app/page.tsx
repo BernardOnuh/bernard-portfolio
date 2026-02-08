@@ -17,51 +17,55 @@ export default function Home() {
       {/* Bio Section */}
       <div className="space-y-5 text-muted leading-relaxed text-base md:text-[17px]">
         <p>
-          Hello, I am currently a <span className="accent-glow">Software Engineer</span> building
+          Hello, I&apos;m currently a <span className="accent-glow">Software Engineer</span> building
           blockchain products, a <span className="accent-glow">Community Builder</span>, and
-          in <span className="accent-glow">Developer Relations</span>. I have had to wear multiple
-          hats over 5 years of my career. I am a very anxious learner and action taker — I live by
-          the quote: <em className="text-foreground/80">&ldquo;Learn, Build, and Earn.&rdquo;</em>
+          a <span className="accent-glow">Developer Relations</span> professional. Over the past 5 years,
+          I&apos;ve worn many hats in the Web3 space.
         </p>
 
         <p>
-          I have built products that have processed over{' '}
-          <span className="text-foreground font-medium">300+ transactions</span>, serving{' '}
-          <span className="text-foreground font-medium">100+ users</span> and handling{' '}
-          <span className="text-foreground font-medium">$20,000+</span> in volume. From smart
-          contracts to full-stack dApps — I ship products that people actually use.
+          I&apos;m an anxious but action-oriented learner — I live by the quote:{' '}
+          <em className="text-foreground/80">&ldquo;Learn, Build, and Earn.&rdquo;</em>
+        </p>
+
+        <p>
+          I&apos;ve shipped products that have processed{' '}
+          <span className="text-foreground font-medium">300+ transactions</span>, served{' '}
+          <span className="text-foreground font-medium">100+ users</span>, and handled over{' '}
+          <span className="text-foreground font-medium">$20,000</span> in volume — from smart
+          contracts to full-stack dApps that people actually use.
         </p>
         
         <p>
-          For 5 years, I have contributed to projects like{' '}
+          For 5 years, I&apos;ve contributed to projects like{' '}
           <Link href="https://polygon.technology/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
             Polygon Africa
           </Link>,{' '}
-          <Link href="https://onchainglobal.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+          <Link href="https://web.telegram.org/k/#@onchainbuilders" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
             Onchain Global
           </Link>,{' '}
           <Link href="https://base.org/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
             Base
           </Link>,{' '}
-          <Link href="https://basedwestafrica.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+          <Link href="https://x.com/BasedWestAfrica" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
             Based West Africa
           </Link>, and{' '}
-          <Link href="#" className="link-dotted text-foreground/90">
+          <Link href="https://x.com/web3_nova" className="link-dotted text-foreground/90">
             Web3Nova
-          </Link> — building communities and shipping code across the African blockchain ecosystem.
+          </Link> — building communities and shipping code across the blockchain ecosystem.
         </p>
 
         <p>
           I&apos;ve onboarded <span className="text-foreground font-medium">200+ developers</span> to
-          the blockchain and still onboarding. If you need help getting started,{' '}
-          <Link href="https://calendly.com/bernardonuh" className="link-dotted text-accent font-medium" target="_blank" rel="noopener noreferrer">
-            let&apos;s chat ↗
+          blockchain so far — and I&apos;m still onboarding more. If you&apos;re looking to get started
+          in Web3, feel free to reach out — happy to help!{' '}
+          <Link href="https://calendly.com/bernard-web3nova/30min" className="link-dotted text-accent font-medium" target="_blank" rel="noopener noreferrer">
+            Let&apos;s chat ↗
           </Link>
         </p>
 
         <p>
-          Currently, I am open to new opportunities and collaborations. You can reach out to me
-          via my contacts to discuss that.
+          Currently open to new opportunities and collaborations. You can contact me via my details to discuss.
         </p>
       </div>
 
