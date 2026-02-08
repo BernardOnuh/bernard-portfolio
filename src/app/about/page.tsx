@@ -83,7 +83,7 @@ export default function About() {
             </Link>,{' '}
             <Link href="hhttps://x.com/Bernard_O1/status/1988845679691608069" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Base
-            </Link>,
+            </Link>,{' '}
             <Link href="https://x.com/Bernard_O1/status/1990215252332384666" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Hyperliquid
             </Link>,
@@ -127,25 +127,29 @@ export default function About() {
           <div className="space-y-6">
             <div className="group p-6 border border-theme rounded-lg hover:border-accent/50 transition-all duration-300">
               <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
-                Bachelor&apos;s of Science, Computer Science
+                Bachelor of Technology, Software Engineering
               </h3>
-              <p className="text-sm text-muted mt-1 mb-3">University · 2017 - 2022</p>
+              <p className="text-sm text-muted mt-1 mb-3">2019 - 2024</p>
               <p className="text-muted leading-relaxed text-sm">
-                Studied core computer science fundamentals including data structures, algorithms, software engineering,
-                computer networks, and distributed systems. This foundation shaped my approach to building scalable
-                blockchain applications.
+                Graduated with excellent grades, top of the class. Studied software engineering fundamentals
+                including data structures, algorithms, system design, and distributed systems — building a
+                strong foundation for shipping scalable blockchain applications.
               </p>
             </div>
 
             <div className="group p-6 border border-theme rounded-lg hover:border-accent/50 transition-all duration-300">
               <h3 className="text-lg font-medium text-foreground group-hover:text-accent transition-colors">
-                Web3 & Blockchain Self-Study
+                Web3 &amp; Blockchain Certifications
               </h3>
-              <p className="text-sm text-muted mt-1 mb-3">Ongoing · 2020 - Present</p>
+              <p className="text-sm text-muted mt-1 mb-3">2021 - Ongoing</p>
               <p className="text-muted leading-relaxed text-sm">
-                Deep-dived into Solidity, smart contract development, EVM architecture, Layer 2 solutions,
-                and cross-chain protocols. Learned by building — shipping dApps, winning hackathons, and
-                contributing to open-source blockchain projects.
+                Certified Smart Contract Developer through{' '}
+                <Link href="https://polygon.technology/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Polygon</Link> and{' '}
+                <Link href="https://updraft.cyfrin.io/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Cyfrin Updraft</Link>.
+                Completed programs at{' '}
+                <Link href="https://www.alchemy.com/university" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Alchemy University</Link> and{' '}
+                <Link href="#" className="link-dotted text-foreground/90">The Nirvana Academy</Link>.
+                Continuously upskilling in Solidity, smart contract security, EVM architecture, and cross-chain protocols.
               </p>
             </div>
           </div>
