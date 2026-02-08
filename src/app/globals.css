@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-color: #0a0a0a;
+  }
+}
+
+@layer components {
+  .accent-glow {
+    @apply text-accent;
+    text-shadow: 0 0 10px theme(colors.accent), 0 0 20px theme(colors.accent);
+  }
+  
+  .link-dotted {
+    @apply underline decoration-dotted underline-offset-4 transition-colors duration-200;
+  }
+  
+  .link-dotted:hover {
+    @apply text-accent;
+  }
+  
+  .navbar-blur {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(10, 10, 10, 0.8);
+  }
+  
+  .typewriter-cursor {
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    51%, 100% {
+      opacity: 0;
+    }
+  }
+}
