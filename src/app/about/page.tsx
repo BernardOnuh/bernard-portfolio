@@ -45,7 +45,7 @@ export default function About() {
 
           <p>
             My work with{' '}
-            <Link href="https://onchainglobal.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            <Link href="https://web.telegram.org/k/#@onchainbuilders" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Onchain Global
             </Link>{' '}
             focuses on developer education and advocacy — creating content, conducting workshops, and
@@ -57,7 +57,7 @@ export default function About() {
             <Link href="https://base.org/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Base
             </Link>{' '}and{' '}
-            <Link href="https://basedwestafrica.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            <Link href="https://x.com/BasedWestAfrica" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Based West Africa
             </Link>, I&apos;m building a thriving ecosystem around the Base blockchain in West Africa —
             connecting developers, entrepreneurs, and innovators passionate about going onchain.
@@ -65,7 +65,7 @@ export default function About() {
 
           <p>
             At{' '}
-            <Link href="#" className="link-dotted text-foreground/90">
+            <Link href="https://x.com/web3_nova" className="link-dotted text-foreground/90">
               Web3Nova
             </Link>, I continue to push the boundaries of what&apos;s possible in the African blockchain space.
           </p>
@@ -75,16 +75,20 @@ export default function About() {
           <p>
             I&apos;ve won <span className="text-foreground font-medium">5+ hackathons</span> and have been
             recognized by leading blockchain protocols including{' '}
-            <Link href="https://wormhole.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            <Link href="https://x.com/Bernard_O1/status/1828832827594682687" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Wormhole
             </Link>,{' '}
-            <Link href="https://layerzero.network/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            <Link href="https://x.com/PrimordialAA/status/1993005650465767463" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               LayerZero
             </Link>,{' '}
-            <Link href="https://base.org/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            <Link href="hhttps://x.com/Bernard_O1/status/1988845679691608069" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Base
-            </Link>, and{' '}
-            <Link href="https://polygon.technology/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+            </Link>,
+            <Link href="https://x.com/Bernard_O1/status/1990215252332384666" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              Hyperliquid
+            </Link>,
+             and{' '}
+            <Link href="https://x.com/Bernard_O1/status/1609842862060888064" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
               Polygon
             </Link> for my contributions to the ecosystem.
           </p>

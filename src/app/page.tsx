@@ -65,7 +65,11 @@ export default function Home() {
         </p>
 
         <p>
-          Currently open to new opportunities and collaborations. You can contact me via my details to discuss.
+          Currently open to new opportunities and collaborations. Reach out at{' '}
+          <Link href="mailto:bernard@web3nova.org" className="link-dotted text-accent font-medium">
+            bernard@web3nova.org
+          </Link>{' '}
+          or via my socials to discuss.
         </p>
       </div>
 
