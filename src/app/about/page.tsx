@@ -70,6 +70,33 @@ export default function About() {
             </Link>, I continue to push the boundaries of what&apos;s possible in the African blockchain space.
           </p>
 
+          <h2 className="text-xl font-heading text-foreground pt-4">Hackathons & Recognition</h2>
+
+          <p>
+            I&apos;ve won <span className="text-foreground font-medium">5+ hackathons</span> and have been
+            recognized by leading blockchain protocols including{' '}
+            <Link href="https://wormhole.com/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              Wormhole
+            </Link>,{' '}
+            <Link href="https://layerzero.network/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              LayerZero
+            </Link>,{' '}
+            <Link href="https://base.org/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              Base
+            </Link>, and{' '}
+            <Link href="https://polygon.technology/" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">
+              Polygon
+            </Link> for my contributions to the ecosystem.
+          </p>
+
+          {/* Add your hackathon links here */}
+          {/* 
+          <ul className="space-y-2 pl-4">
+            <li>🏆 <Link href="#" className="link-dotted text-foreground/90">Hackathon Name 1</Link> — Winner</li>
+            <li>🏆 <Link href="#" className="link-dotted text-foreground/90">Hackathon Name 2</Link> — Winner</li>
+          </ul>
+          */}
+
           <h2 className="text-xl font-heading text-foreground pt-4">Developer Onboarding</h2>
 
           <p>
@@ -91,7 +118,7 @@ export default function About() {
         </div>
 
         {/* Quick stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-theme">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 pt-8 border-t border-theme">
           <div>
             <p className="text-2xl font-heading text-foreground">5+</p>
             <p className="text-xs text-muted mt-1 uppercase tracking-wide">Years in Web3</p>
@@ -107,6 +134,10 @@ export default function About() {
           <div>
             <p className="text-2xl font-heading text-foreground">$20K+</p>
             <p className="text-xs text-muted mt-1 uppercase tracking-wide">Volume</p>
+          </div>
+          <div>
+            <p className="text-2xl font-heading text-foreground">5+</p>
+            <p className="text-xs text-muted mt-1 uppercase tracking-wide">Hackathons Won</p>
           </div>
         </div>
       </div>

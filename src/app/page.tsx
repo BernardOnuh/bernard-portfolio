@@ -70,7 +70,7 @@ export default function Home() {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-theme">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-14 pt-10 border-t border-theme">
         <div className="text-center">
           <p className="text-2xl md:text-3xl font-heading text-foreground">300+</p>
           <p className="text-xs text-muted mt-1 uppercase tracking-wide">Transactions</p>
@@ -82,6 +82,10 @@ export default function Home() {
         <div className="text-center">
           <p className="text-2xl md:text-3xl font-heading text-foreground">$20K+</p>
           <p className="text-xs text-muted mt-1 uppercase tracking-wide">Volume</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl md:text-3xl font-heading text-foreground">5+</p>
+          <p className="text-xs text-muted mt-1 uppercase tracking-wide">Hackathons Won</p>
         </div>
       </div>
 
