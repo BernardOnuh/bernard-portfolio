@@ -16,8 +16,8 @@
 
 @layer components {
   .accent-glow {
-    @apply text-accent;
-    text-shadow: 0 0 10px theme(colors.accent), 0 0 20px theme(colors.accent);
+    @apply text-accent font-semibold;
+    text-shadow: 0 0 8px rgba(252, 100, 50, 0.3);
   }
   
   .link-dotted {

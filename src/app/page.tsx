@@ -15,16 +15,23 @@ export default function Home() {
       </div>
 
       {/* Bio Section */}
-      <div className="space-y-6 text-muted leading-relaxed">
+      <div className="space-y-6 text-muted leading-relaxed text-base md:text-lg">
         <p>
-          Hello, I am currently a <span className="accent-glow font-medium">Software Engineer</span> building blockchain products and a <span className="accent-glow font-medium">Community Builder</span>. I have had to wear multiple hats over 5 years of my career. I am a very <span className="accent-glow font-medium">anxious learner and action taker</span>.
+          Hello, I am currently a <span className="accent-glow">Software Engineer</span> building blockchain products and a <span className="accent-glow">Community Builder</span>. I have had to wear multiple hats over 5 years of my career. I am a very <span className="accent-glow">anxious learner and action taker</span>.
+        </p>
+
+        <p>
+          I have built products that have processed over{' '}
+          <span className="text-foreground font-semibold">300+ transactions</span>,{' '}
+          serving <span className="text-foreground font-semibold">100+ users</span> and handling{' '}
+          <span className="text-foreground font-semibold">$20,000+</span> in volume. From smart contracts to full-stack dApps, I ship products that people actually use.
         </p>
         
         <p>
           For 5 years, I have contributed to projects like{' '}
           <Link 
             href="https://polygon.technology/" 
-            className="link-dotted text-foreground"
+            className="link-dotted text-foreground/90 hover:text-accent"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -33,7 +40,7 @@ export default function Home() {
           ,{' '}
           <Link 
             href="https://onchainglobal.com/" 
-            className="link-dotted text-foreground"
+            className="link-dotted text-foreground/90 hover:text-accent"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -42,18 +49,34 @@ export default function Home() {
           , and{' '}
           <Link 
             href="https://basedwestafrica.com/" 
-            className="link-dotted text-foreground"
+            className="link-dotted text-foreground/90 hover:text-accent"
             target="_blank"
             rel="noopener noreferrer"
           >
             Based West Africa
           </Link>
-          .
+          , building communities and shipping code across the African blockchain ecosystem.
         </p>
-        
+
         <p>
           Currently, I am open to new opportunities and collaborations. You can reach out to me via my contacts to discuss that.
         </p>
+      </div>
+
+      {/* Stats Section */}
+      <div className="grid grid-cols-3 gap-6 mt-14 pt-10 border-t border-white/10">
+        <div className="text-center">
+          <p className="text-2xl md:text-3xl font-bold text-foreground">300+</p>
+          <p className="text-sm text-muted mt-1">Transactions</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl md:text-3xl font-bold text-foreground">100+</p>
+          <p className="text-sm text-muted mt-1">Users</p>
+        </div>
+        <div className="text-center">
+          <p className="text-2xl md:text-3xl font-bold text-foreground">$20K+</p>
+          <p className="text-sm text-muted mt-1">Volume</p>
+        </div>
       </div>
     </div>
   )

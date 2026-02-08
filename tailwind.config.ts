@@ -12,7 +12,8 @@ const config: Config = {
         background: '#0a0a0a',
         foreground: '#ffffff',
         muted: '#6b7280',
-        accent: '#5546ff',
+        accent: '#FC6432',
+        'accent-secondary': '#E8B931',
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
