@@ -13,7 +13,7 @@ const projects = [
     demo: '#',
     featured: true,
     color: 'cyan',
-    logo: 'https://raw.githubusercontent.com/BernardOnuh/Aboki-V2-Frontend/main/public/favicon.ico',
+    logo: '/logos/aboki.jpg',
     fallbackLetter: 'A',
   },
   {
@@ -78,6 +78,7 @@ const projects = [
     demo: null,
     featured: false,
     color: 'orange',
+    logo: '/logos/refuel.jpg',
     fallbackLetter: 'R',
   },
   {
