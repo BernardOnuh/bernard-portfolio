@@ -19,6 +19,7 @@ export default function Navbar() {
             <Link href="/about" className="text-sm text-muted hover:text-foreground transition-colors">About</Link>
             <Link href="/experience" className="text-sm text-muted hover:text-foreground transition-colors">Experience</Link>
             <Link href="/projects" className="text-sm text-muted hover:text-foreground transition-colors">Projects</Link>
+            <Link href="/speaking" className="text-sm text-muted hover:text-foreground transition-colors">Speaking</Link>
             <Link href="/blog" className="text-sm text-muted hover:text-foreground transition-colors">Blog</Link>
             <ThemeToggle />
           </div>
@@ -46,6 +47,7 @@ export default function Navbar() {
             <Link href="/about" className="block text-muted hover:text-foreground transition-colors py-2" onClick={() => setIsOpen(false)}>About</Link>
             <Link href="/experience" className="block text-muted hover:text-foreground transition-colors py-2" onClick={() => setIsOpen(false)}>Experience</Link>
             <Link href="/projects" className="block text-muted hover:text-foreground transition-colors py-2" onClick={() => setIsOpen(false)}>Projects</Link>
+            <Link href="/speaking" className="block text-muted hover:text-foreground transition-colors py-2" onClick={() => setIsOpen(false)}>Speaking</Link>
             <Link href="/blog" className="block text-muted hover:text-foreground transition-colors py-2" onClick={() => setIsOpen(false)}>Blog</Link>
           </div>
         )}
