@@ -13,6 +13,7 @@ const events = [
     attendees: '70+',
     description: 'Builders coming together to participate in the hackathon Base Batches 2.0.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'SUI on Campus FUTA Workshop',
@@ -23,6 +24,7 @@ const events = [
     attendees: '80+',
     description: 'Introducing students to SUI blockchain technology, covering smart contracts and decentralized applications.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'Avax Builders Workshop',
@@ -33,6 +35,7 @@ const events = [
     attendees: '40+',
     description: 'Introducing Avax L1 and NFTs, wrapping up with paint and sip.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'Farcaster Meetup',
@@ -43,6 +46,7 @@ const events = [
     attendees: '50+',
     description: 'Community gathering focused on the Farcaster protocol, exploring decentralized social networking.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'Avalanche Workshop',
@@ -53,6 +57,7 @@ const events = [
     attendees: '65+',
     description: 'Deep dive into Avalanche blockchain ecosystem, featuring subnet development and cross-chain capabilities.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'Base Batches 1.0 Hacker House',
@@ -63,6 +68,7 @@ const events = [
     attendees: '100+',
     description: 'Intensive hacker house event on Base L2 blockchain, bringing developers together to build innovative projects.',
     link: 'https://www.web3nova.org/events',
+    youtube: 'https://www.youtube.com/watch?v=tA-YJ3KCFZU',
   },
   {
     title: 'DEVCON Workshop',
@@ -73,6 +79,7 @@ const events = [
     attendees: '70+',
     description: 'Post-DEVCON workshop sharing insights from the global Ethereum conference and protocol updates.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
   },
   {
     title: 'Base Hacker Workshop',
@@ -83,6 +90,34 @@ const events = [
     attendees: '60+',
     description: 'Introduction to building on Base — smart contract deployment, gas optimization, and integrating Base into Web3 applications.',
     link: 'https://www.web3nova.org/events',
+    youtube: null,
+  },
+]
+
+const workshopVideos = [
+  {
+    title: 'Transition From Web2 to Web3 — Connecting to the Blockchain',
+    youtube: 'https://www.youtube.com/watch?v=kVoq_B6rncM',
+  },
+  {
+    title: 'Web2 to Web3 PT 2 — Connect Using VIEM, WAGMI & THIRDWEB',
+    youtube: 'https://www.youtube.com/watch?v=rZB06zhVi3g',
+  },
+  {
+    title: 'BASE BATCHES — Bring Your Dream on Base',
+    youtube: 'https://www.youtube.com/watch?v=tA-YJ3KCFZU',
+  },
+  {
+    title: 'Giza & Enzymes Hackathon',
+    youtube: 'https://www.youtube.com/watch?v=JJHoVg3ofOw',
+  },
+  {
+    title: 'Scaling Web3 Hackathon — Infinity',
+    youtube: 'https://www.youtube.com/watch?v=wYMxq2r00ic',
+  },
+  {
+    title: 'ETHGlobal Hackathon',
+    youtube: 'https://www.youtube.com/watch?v=vXIt3f-9RLQ',
   },
 ]
 
@@ -314,6 +349,19 @@ export default function Speaking() {
                       </div>
                     </div>
                     <p className="text-muted text-sm leading-relaxed">{talk.description}</p>
+                    {talk.youtube && (
+                      <Link
+                        href={talk.youtube}
+                        className="inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 transition-colors mt-3"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                        Watch on YouTube
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
               </FadeUp>
@@ -333,6 +381,65 @@ export default function Speaking() {
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                 </svg>
                 See more event highlights on X ↗
+              </Link>
+            </div>
+          </FadeUp>
+        </section>
+
+        {/* Workshop Videos */}
+        <section>
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-xl font-heading text-foreground">Workshop Videos</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
+
+          <StaggerContainer className="grid gap-3 md:grid-cols-2" staggerDelay={0.08}>
+            {workshopVideos.map((video) => (
+              <StaggerItem key={video.youtube}>
+                <Link
+                  href={video.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.02, y: -2 }}
+                    transition={{ type: 'spring', stiffness: 400 }}
+                    className="group flex items-center gap-3 p-4 border border-theme rounded-lg hover:border-red-500/40 hover:shadow-lg hover:shadow-red-500/5 transition-all duration-300"
+                  >
+                    <div className="shrink-0 w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+                      <svg className="w-5 h-5 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                      </svg>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-sm font-medium text-foreground group-hover:text-red-400 transition-colors truncate">
+                        {video.title}
+                      </p>
+                      <p className="text-[11px] text-muted">YouTube</p>
+                    </div>
+                    <svg className="w-4 h-4 text-muted group-hover:text-red-400 transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </motion.div>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <FadeUp delay={0.3}>
+            <div className="mt-4 text-center">
+              <Link
+                href="https://www.youtube.com/@Bernard_O1"
+                className="inline-flex items-center gap-2 text-sm text-muted hover:text-red-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+                View all videos on YouTube ↗
               </Link>
             </div>
           </FadeUp>
