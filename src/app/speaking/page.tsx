@@ -3,54 +3,86 @@
 import Link from 'next/link'
 import { FadeUp, FadeLeft, BlurFade, StaggerContainer, StaggerItem, RevealLine, ScaleUp, motion } from '@/components/motion'
 
-const talks = [
+const events = [
   {
-    title: 'Building Cross-Chain Applications with Wormhole',
-    event: 'Wormhole Hackathon',
+    title: 'Base Batches 2.0 Hacker House',
+    event: 'Web3Nova × Base',
+    type: 'Hacker House',
+    date: 'November 2025',
+    location: 'Akure',
+    attendees: '70+',
+    description: 'Builders coming together to participate in the hackathon Base Batches 2.0.',
+    link: 'https://www.web3nova.org/events',
+  },
+  {
+    title: 'SUI on Campus FUTA Workshop',
+    event: 'Web3Nova × SUI',
     type: 'Workshop',
-    date: '2024',
-    description: 'Hands-on workshop on building cross-chain dApps using Wormhole\'s messaging protocol for seamless multi-chain communication.',
-    link: 'https://x.com/Bernard_O1/status/1828832827594682687',
+    date: 'September 2025',
+    location: 'FUTA, Akure',
+    attendees: '80+',
+    description: 'Introducing students to SUI blockchain technology, covering smart contracts and decentralized applications.',
+    link: 'https://www.web3nova.org/events',
   },
   {
-    title: 'Getting Started with Smart Contracts on Stacks',
-    event: 'Web3Nova Workshop',
+    title: 'Avax Builders Workshop',
+    event: 'Web3Nova × Avalanche',
     type: 'Workshop',
-    date: '2024',
-    description: 'Developer workshop covering Clarity smart contract development, testing, and deployment on the Stacks blockchain.',
-    link: '#',
+    date: 'August 2025',
+    location: 'FUTA, Akure',
+    attendees: '40+',
+    description: 'Introducing Avax L1 and NFTs, wrapping up with paint and sip.',
+    link: 'https://www.web3nova.org/events',
   },
   {
-    title: 'Onchain Summer: Building on Base',
-    event: 'Based West Africa Meetup',
-    type: 'Talk',
-    date: '2024',
-    description: 'Community talk on the Base ecosystem, building consumer-facing dApps, and the Onchain Summer initiative in Africa.',
-    link: 'https://x.com/BasedWestAfrica',
+    title: 'Farcaster Meetup',
+    event: 'Web3Nova × Farcaster',
+    type: 'Meetup',
+    date: 'August 2025',
+    location: 'Akure',
+    attendees: '50+',
+    description: 'Community gathering focused on the Farcaster protocol, exploring decentralized social networking.',
+    link: 'https://www.web3nova.org/events',
   },
   {
-    title: 'Introduction to DeFi Development',
-    event: 'Onchain Global Workshop',
+    title: 'Avalanche Workshop',
+    event: 'Web3Nova × Avalanche',
     type: 'Workshop',
-    date: '2023',
-    description: 'Beginner-friendly workshop teaching DeFi fundamentals — AMMs, lending protocols, and building your first DeFi dApp.',
-    link: 'https://web.telegram.org/k/#@onchainbuilders',
+    date: 'June 2025',
+    location: 'Akure',
+    attendees: '65+',
+    description: 'Deep dive into Avalanche blockchain ecosystem, featuring subnet development and cross-chain capabilities.',
+    link: 'https://www.web3nova.org/events',
   },
   {
-    title: 'Polygon for African Developers',
-    event: 'Polygon Africa Summit',
-    type: 'Talk',
-    date: '2022',
-    description: 'Keynote on Polygon\'s ecosystem, Layer 2 scaling solutions, and opportunities for African developers in the Polygon ecosystem.',
-    link: 'https://polygon.technology/',
+    title: 'Base Batches 1.0 Hacker House',
+    event: 'Web3Nova × Base',
+    type: 'Hacker House',
+    date: 'May 2025',
+    location: 'Akure',
+    attendees: '100+',
+    description: 'Intensive hacker house event on Base L2 blockchain, bringing developers together to build innovative projects.',
+    link: 'https://www.web3nova.org/events',
   },
   {
-    title: 'From Zero to Smart Contract Developer',
-    event: 'Polygon Africa Bootcamp',
-    type: 'Workshop Series',
-    date: '2022',
-    description: 'Multi-week bootcamp taking developers from JavaScript basics to deploying production smart contracts on Polygon.',
-    link: 'https://polygon.technology/',
+    title: 'DEVCON Workshop',
+    event: 'Web3Nova',
+    type: 'Workshop',
+    date: 'February 2025',
+    location: 'Akure',
+    attendees: '70+',
+    description: 'Post-DEVCON workshop sharing insights from the global Ethereum conference and protocol updates.',
+    link: 'https://www.web3nova.org/events',
+  },
+  {
+    title: 'Base Hacker Workshop',
+    event: 'Web3Nova × Base',
+    type: 'Workshop',
+    date: 'October 2024',
+    location: 'Akure',
+    attendees: '60+',
+    description: 'Introduction to building on Base — smart contract deployment, gas optimization, and integrating Base into Web3 applications.',
+    link: 'https://www.web3nova.org/events',
   },
 ]
 
@@ -61,6 +93,9 @@ const topics = [
   'Developer Onboarding',
   'Building on Base',
   'Stacks & Bitcoin L2',
+  'SUI Blockchain',
+  'Avalanche Ecosystem',
+  'Farcaster & SocialFi',
   'Web3 in Africa',
   'Community Building',
   'Hackathon Strategy',
@@ -72,7 +107,7 @@ const communities = [
     name: 'Web3Nova',
     role: 'Founder',
     description: 'Building the next generation of Web3 builders in Africa through education, mentorship, and hands-on development.',
-    link: 'https://x.com/web3_nova',
+    link: 'https://www.web3nova.org',
     members: '500+',
   },
   {
@@ -98,17 +133,20 @@ const communities = [
   },
 ]
 
+const totalAttendees = events.reduce((sum, e) => sum + parseInt(e.attendees), 0)
+
 const impactStats = [
   { value: '200+', label: 'Developers Onboarded' },
-  { value: '20+', label: 'Workshops Delivered' },
+  { value: `${events.length}+`, label: 'Events Organized' },
+  { value: `${totalAttendees}+`, label: 'Total Attendees' },
   { value: '5+', label: 'Communities Built' },
-  { value: '10K+', label: 'Community Members' },
 ]
 
 const typeColors: Record<string, string> = {
   'Workshop': 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20',
-  'Talk': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
-  'Workshop Series': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  'Hacker House': 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+  'Meetup': 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+  'Talk': 'bg-orange-500/10 text-orange-400 border-orange-500/20',
 }
 
 export default function Speaking() {
@@ -125,7 +163,7 @@ export default function Speaking() {
           </FadeUp>
           <FadeUp delay={0.2}>
             <p className="text-muted text-lg leading-relaxed">
-              Workshops, talks, and community building — helping developers go from zero to onchain across Africa and beyond.
+              Workshops, hacker houses, and community building — helping developers go from zero to onchain across Africa.
             </p>
           </FadeUp>
 
@@ -202,14 +240,22 @@ export default function Speaking() {
           </StaggerContainer>
         </section>
 
-        {/* Talks & Workshops */}
+        {/* Events & Talks */}
         <section>
           <FadeLeft>
-            <div className="flex items-center gap-3 mb-8">
-              <h2 className="text-xl font-heading text-foreground">Talks & Workshops</h2>
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-xl font-heading text-foreground">Events & Workshops</h2>
               <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
             </div>
           </FadeLeft>
+          <FadeUp delay={0.1}>
+            <p className="text-muted text-sm mb-8">
+              Organized and spoke at {events.length}+ events with {totalAttendees}+ total attendees.{' '}
+              <Link href="https://www.web3nova.org/events" className="link-dotted text-accent" target="_blank" rel="noopener noreferrer">
+                See all events ↗
+              </Link>
+            </p>
+          </FadeUp>
 
           <div className="space-y-4 relative">
             {/* Timeline */}
@@ -221,8 +267,8 @@ export default function Speaking() {
               className="absolute left-0 top-0 w-[2px] bg-gradient-to-b from-accent via-accent/40 to-transparent"
             />
 
-            {talks.map((talk, index) => (
-              <FadeUp key={index} delay={index * 0.08}>
+            {events.map((talk, index) => (
+              <FadeUp key={index} delay={index * 0.06}>
                 <motion.div
                   whileHover={{ x: 6 }}
                   transition={{ type: 'spring', stiffness: 300 }}
@@ -233,48 +279,63 @@ export default function Speaking() {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.08 + 0.2, type: 'spring', stiffness: 500 }}
+                    transition={{ delay: index * 0.06 + 0.2, type: 'spring', stiffness: 500 }}
                     className="absolute left-[-4px] top-2 w-[10px] h-[10px] rounded-full bg-accent border-2"
                     style={{ borderColor: 'var(--bg)' }}
                   />
 
                   <div className="p-5 border border-theme rounded-lg hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300">
                     <div className="flex items-start justify-between gap-3 mb-2">
-                      <div>
+                      <div className="flex-1">
                         <h3 className="text-base font-medium text-foreground group-hover:text-accent transition-colors">
                           {talk.title}
                         </h3>
-                        <p className="text-xs text-muted mt-0.5">{talk.event} · {talk.date}</p>
+                        <p className="text-xs text-muted mt-0.5">{talk.event} · {talk.date} · {talk.location}</p>
                       </div>
-                      <motion.span
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.08 + 0.3, type: 'spring', stiffness: 500 }}
-                        className={`text-[10px] px-2 py-0.5 rounded-full font-medium border shrink-0 ${typeColors[talk.type] || typeColors['Talk']}`}
-                      >
-                        {talk.type}
-                      </motion.span>
+                      <div className="flex items-center gap-2 shrink-0">
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          whileInView={{ scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.06 + 0.3, type: 'spring', stiffness: 500 }}
+                          className={`text-[10px] px-2 py-0.5 rounded-full font-medium border ${typeColors[talk.type] || typeColors['Talk']}`}
+                        >
+                          {talk.type}
+                        </motion.span>
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          whileInView={{ scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.06 + 0.35, type: 'spring', stiffness: 500 }}
+                          className="text-[10px] px-2 py-0.5 rounded-full font-medium bg-foreground/5 text-foreground/60 border border-theme"
+                        >
+                          {talk.attendees}
+                        </motion.span>
+                      </div>
                     </div>
                     <p className="text-muted text-sm leading-relaxed">{talk.description}</p>
-                    {talk.link && talk.link !== '#' && (
-                      <Link
-                        href={talk.link}
-                        className="inline-flex items-center gap-1 text-xs text-muted hover:text-accent transition-colors mt-3"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        View details
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </Link>
-                    )}
                   </div>
                 </motion.div>
               </FadeUp>
             ))}
           </div>
+
+          {/* Link to tweet */}
+          <FadeUp delay={0.2}>
+            <div className="mt-6 pl-6">
+              <Link
+                href="https://x.com/bernard_o1/status/1961746638298321113"
+                className="inline-flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+                See more event highlights on X ↗
+              </Link>
+            </div>
+          </FadeUp>
         </section>
 
         {/* Topics */}
@@ -303,6 +364,31 @@ export default function Speaking() {
           </div>
         </section>
 
+        {/* Protocols banner */}
+        <section>
+          <FadeUp>
+            <div className="flex items-center gap-3 mb-6">
+              <h2 className="text-xl font-heading text-foreground">Protocols & Partners</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {['Base', 'Avalanche', 'Farcaster', 'SUI', 'Lisk', 'Polygon', 'Wormhole', 'LayerZero', 'Hyperliquid'].map((protocol, i) => (
+                <motion.span
+                  key={protocol}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.05 }}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="px-4 py-2 text-sm font-medium bg-card border border-theme rounded-lg hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default"
+                >
+                  {protocol}
+                </motion.span>
+              ))}
+            </div>
+          </FadeUp>
+        </section>
+
         {/* CTA */}
         <ScaleUp>
           <div className="p-8 border border-theme rounded-2xl text-center hover:border-accent/30 transition-all duration-500">
@@ -314,9 +400,9 @@ export default function Speaking() {
             >
               <h3 className="text-xl font-heading text-foreground mb-2">Want me to speak at your event?</h3>
               <p className="text-muted text-sm mb-6 max-w-md mx-auto">
-                I&apos;m available for workshops, talks, panels, and community events — especially around blockchain development and Web3 in Africa.
+                I&apos;m available for workshops, talks, hacker houses, and community events — especially around blockchain development and Web3 in Africa.
               </p>
-              <div className="flex items-center justify-center gap-4">
+              <div className="flex items-center justify-center gap-4 flex-wrap">
                 <Link
                   href="mailto:bernard@web3nova.org"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-white hover:bg-accent/90 transition-all duration-300 text-sm font-medium hover:shadow-lg hover:shadow-accent/20"
