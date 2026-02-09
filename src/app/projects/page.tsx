@@ -2,6 +2,22 @@ import Link from 'next/link'
 
 const projects = [
   {
+    name: 'Aboki',
+    description: 'Crypto-to-fiat conversion platform enabling seamless swaps between digital assets and Nigerian Naira with real-time rates.',
+    tech: ['Next.js', 'TypeScript', 'DeFi', 'Payments'],
+    github: 'https://github.com/BernardOnuh/Aboki-V2-Frontend',
+    demo: '#',
+    featured: true
+  },
+  {
+    name: 'Bizflip',
+    description: 'Decentralized business marketplace platform with smart contract escrow for buying, selling, and flipping digital businesses.',
+    tech: ['Next.js', 'Solidity', 'Smart Contracts'],
+    github: 'https://github.com/BernardOnuh/Bizflip-Frontend',
+    demo: '#',
+    featured: true
+  },
+  {
     name: 'STX Ramp',
     description: 'STX/USDC to NGN On-Ramp & Off-Ramp solution for seamless fiat-to-crypto conversion in Nigeria.',
     tech: ['TypeScript', 'Next.js', 'Stacks Blockchain'],
@@ -10,88 +26,72 @@ const projects = [
     featured: true
   },
   {
+    name: 'Zap Amadi',
+    description: 'Crypto-to-fiat dApp built for the Base Onchain Summer Buildathon — seamless conversion powered by Base.',
+    tech: ['TypeScript', 'Base', 'Onchain'],
+    github: 'https://github.com/BernardOnuh/zap-Amadi',
+    demo: '#',
+    featured: true
+  },
+  {
+    name: 'LinguaLink',
+    description: 'AI-powered translation and language learning platform bridging communication gaps across Africa.',
+    tech: ['TypeScript', 'Next.js', 'AI'],
+    github: 'https://github.com/BernardOnuh/LinguaLink-New',
+    demo: '#',
+    featured: true
+  },
+  {
+    name: 'Future Edge',
+    description: 'Telegram trading bot for automated crypto trading strategies with real-time market analysis.',
+    tech: ['Python', 'Telegram Bot', 'Trading'],
+    github: 'https://github.com/BernardOnuh/futureTg',
+    demo: null,
+    featured: false
+  },
+  {
+    name: 'Refuel Bot',
+    description: 'Automated Telegram bot for DeFi operations — gas refueling, token swaps, and portfolio management.',
+    tech: ['TypeScript', 'Telegram Bot', 'DeFi'],
+    github: 'https://github.com/BernardOnuh/Hurryfibot',
+    demo: null,
+    featured: false
+  },
+  {
     name: 'STX Portfolio Tracker',
-    description: 'Web app and Chrome extension for monitoring multiple STX addresses, tracking balances and portfolio value with real-time data.',
+    description: 'Web app and Chrome extension for monitoring multiple STX addresses, tracking balances and portfolio value.',
     tech: ['JavaScript', 'Chrome Extension', 'Stacks API'],
     github: 'https://github.com/BernardOnuh/STX-Portfolio-Tracker',
     demo: 'https://stxportfoliotracker.vercel.app',
-    featured: true
+    featured: false
   },
   {
-    name: 'Stacks Lightning Swaps',
-    description: 'Bridge between Bitcoin Lightning Network and Stacks blockchain for instant, low-cost transactions.',
-    tech: ['TypeScript', 'Lightning Network', 'Stacks'],
-    github: 'https://github.com/BernardOnuh/stacks-lightning-swaps',
+    name: 'Hyperliquid Hackathon',
+    description: 'Project built at the Staking Summit Buenos Aires 2025 hackathon on Hyperliquid.',
+    tech: ['TypeScript', 'Hyperliquid', 'DeFi'],
+    github: 'https://github.com/BernardOnuh/hyperliquid-hackathon-ba-25',
     demo: null,
-    featured: true
+    featured: false
   },
   {
     name: 'StackSend',
-    description: 'Multisend dApp on Stacks Network enabling batch token transfers to multiple addresses in a single transaction.',
+    description: 'Multisend dApp on Stacks Network — batch token transfers to multiple addresses in one transaction.',
     tech: ['TypeScript', 'Stacks', 'Web3'],
     github: 'https://github.com/BernardOnuh/stacksend',
     demo: 'https://stacksend.xyz',
     featured: false
   },
   {
-    name: 'Ordyswap',
-    description: 'Decentralized exchange for Bitcoin Ordinals and inscriptions on the Stacks blockchain.',
-    tech: ['Clarity', 'Bitcoin Ordinals', 'Stacks'],
-    github: 'https://github.com/BernardOnuh/ordyswap',
-    demo: null,
-    featured: false
-  },
-  {
-    name: 'Stacks Fundraising Platform',
-    description: 'Decentralized crowdfunding platform built on Stacks blockchain for transparent project funding.',
-    tech: ['TypeScript', 'Stacks', 'Smart Contracts'],
-    github: 'https://github.com/BernardOnuh/Stacks-Fundraising',
-    demo: null,
-    featured: false
-  },
-  {
-    name: 'BTC Prediction Market',
-    description: 'Decentralized prediction market for Bitcoin price movements with community-driven forecasting.',
-    tech: ['TypeScript', 'DeFi', 'Prediction Markets'],
-    github: 'https://github.com/BernardOnuh/btc-prediction-market',
-    demo: null,
-    featured: false
-  },
-  {
-    name: 'Bitcoin TX-Enabled NFT',
-    description: 'NFT smart contract that enables Bitcoin transaction verification and cross-chain functionality.',
-    tech: ['Clarity', 'Bitcoin', 'NFTs'],
-    github: 'https://github.com/BernardOnuh/btc-tx-enabled-nft',
-    demo: null,
-    featured: false
-  },
-  {
-    name: 'Stacks Fungible Token',
-    description: 'Standard implementation of fungible tokens on the Stacks blockchain with enhanced features.',
-    tech: ['TypeScript', 'Clarity', 'Token Standards'],
-    github: 'https://github.com/BernardOnuh/stacks-fungible-token',
-    demo: null,
-    featured: false
-  },
-  {
-    name: 'Semi-Fungible Token',
-    description: 'Implementation of semi-fungible token standard combining properties of both fungible and non-fungible tokens.',
-    tech: ['Clarity', 'Token Standards', 'Stacks'],
-    github: 'https://github.com/BernardOnuh/semi-fungible-token',
-    demo: null,
-    featured: false
-  },
-  {
     name: 'StacksFlow Bridge',
-    description: 'Cross-chain bridge connecting Stacks with other major blockchain networks for seamless asset transfers.',
-    tech: ['TypeScript', 'Cross-chain', 'Bridge Protocol'],
+    description: 'Cross-chain bridge connecting Stacks with other blockchain networks for seamless asset transfers.',
+    tech: ['TypeScript', 'Cross-chain', 'Bridge'],
     github: 'https://github.com/BernardOnuh/stacksflow',
     demo: 'https://stacksbridge.vercel.app',
     featured: false
   },
   {
     name: 'StableFlow',
-    description: 'Stablecoin liquidity protocol providing yield farming and automated market making on Stacks.',
+    description: 'Stablecoin liquidity protocol with yield farming and automated market making on Stacks.',
     tech: ['JavaScript', 'DeFi', 'AMM'],
     github: 'https://github.com/BernardOnuh/stable-flow',
     demo: 'https://stable-flow.vercel.app',

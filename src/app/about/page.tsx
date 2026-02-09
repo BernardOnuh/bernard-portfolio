@@ -167,7 +167,7 @@ export default function About() {
             <div>
               <h3 className="text-lg font-medium text-foreground mb-4">Technical Skills</h3>
               <div className="flex flex-wrap gap-2">
-                {['Solidity', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Rust', 'Smart Contracts', 'EVM', 'Hardhat', 'Foundry', 'Ethers.js', 'Web3.js', 'The Graph', 'IPFS', 'REST APIs', 'GraphQL', 'Git', 'Docker', 'Tailwind CSS'].map((skill) => (
+                {['Solidity', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'Python', 'Smart Contracts', 'EVM', 'Hardhat', 'Foundry', 'Ethers.js', 'REST APIs', 'Git', 'Tailwind CSS'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
                     {skill}
                   </span>
@@ -178,7 +178,7 @@ export default function About() {
             <div>
               <h3 className="text-lg font-medium text-foreground mb-4">Blockchain & Web3</h3>
               <div className="flex flex-wrap gap-2">
-                {['Ethereum', 'Polygon', 'Base', 'Stacks', 'LayerZero', 'Wormhole', 'DeFi', 'NFTs', 'DAOs', 'Cross-chain', 'Token Standards', 'Wallet Integration', 'dApp Development', 'Smart Contract Auditing'].map((skill) => (
+                {['Ethereum', 'Polygon', 'Base', 'Stacks', 'LayerZero', 'Wormhole', 'Hyperliquid', 'DeFi', 'Cross-chain', 'Token Standards', 'dApp Development'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
                     {skill}
                   </span>
@@ -189,7 +189,7 @@ export default function About() {
             <div>
               <h3 className="text-lg font-medium text-foreground mb-4">Community & DevRel</h3>
               <div className="flex flex-wrap gap-2">
-                {['Developer Relations', 'Community Building', 'Technical Writing', 'Public Speaking', 'Workshop Facilitation', 'Event Planning', 'Developer Onboarding', 'Content Creation', 'Social Media', 'Discord', 'Telegram'].map((skill) => (
+                {['Developer Relations', 'Community Building', 'Technical Writing', 'Public Speaking', 'Workshop Facilitation', 'Developer Onboarding', 'Content Creation'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
                     {skill}
                   </span>
@@ -200,7 +200,7 @@ export default function About() {
             <div>
               <h3 className="text-lg font-medium text-foreground mb-4">Tools</h3>
               <div className="flex flex-wrap gap-2">
-                {['VS Code', 'GitHub', 'Vercel', 'Notion', 'Figma', 'Postman', 'Remix IDE', 'MetaMask', 'Alchemy', 'Infura', 'Etherscan', 'Dune Analytics', 'Linux', 'Slack', 'Jira'].map((skill) => (
+                {['VS Code', 'GitHub', 'Vercel', 'Figma', 'Postman', 'Remix IDE', 'MetaMask', 'Alchemy', 'Etherscan'].map((skill) => (
                   <span key={skill} className="px-3 py-1.5 text-sm bg-card border border-theme rounded-full hover:border-accent/50 hover:text-accent transition-all duration-300 cursor-default">
                     {skill}
                   </span>
