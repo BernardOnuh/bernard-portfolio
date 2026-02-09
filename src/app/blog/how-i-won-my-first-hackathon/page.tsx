@@ -29,46 +29,91 @@ export default function Post() {
       <FadeUp delay={0.2}>
         <div className="prose-custom space-y-6 text-muted leading-relaxed text-base md:text-[17px]">
           <p>
-            I still remember the feeling — heart pounding, palms sweating, staring at my screen at 3 AM trying to get a smart contract to compile. That was my first hackathon experience, and it changed everything.
+            My first hackathon was with <span className="text-foreground font-medium">Polygon</span>, and I went in with one mindset: <em className="text-foreground/80">&ldquo;I&apos;m going to win this.&rdquo;</em> Not because I was the most experienced person in the room — far from it. But because I was the most determined.
           </p>
 
-          <h2 className="text-xl font-heading text-foreground pt-4">The Beginning</h2>
+          <h2 className="text-xl font-heading text-foreground pt-4">A Complete Beginner, But Hungry</h2>
           <p>
-            I had been learning Solidity for about 6 months when I saw a hackathon announcement from <span className="text-foreground font-medium">Polygon</span>. I almost didn&apos;t register. Who was I? Just some guy in Akure learning from YouTube tutorials. But something told me to just go for it.
-          </p>
-
-          <p>
-            The theme was DeFi, and I decided to build a simple token swap mechanism. Nothing fancy — just clean, working code that solved a real problem. I spent the first day just planning and researching existing solutions. That turned out to be the smartest decision I made.
-          </p>
-
-          <h2 className="text-xl font-heading text-foreground pt-4">The Build</h2>
-          <p>
-            48 hours. That&apos;s all I had. I scoped down aggressively — no fancy UI, no bells and whistles. Just a solid smart contract with a clean React frontend. I wrote tests first (something most hackathon participants skip), and it saved me hours of debugging later.
+            Let me be honest — I had very little experience with smart contracts at the time. The whole blockchain development world was still new to me. I didn&apos;t know Solidity inside-out. I couldn&apos;t write a DeFi protocol from scratch. But what I had was something that no tutorial can teach: <span className="text-foreground font-medium">raw dedication and an obsession with learning</span>.
           </p>
 
           <p>
-            At hour 36, everything broke. A critical bug in my liquidity calculation meant the entire swap logic was wrong. I almost gave up. But I took a walk, grabbed some coffee, came back and rewrote the entire function from scratch. Sometimes you have to throw away code to move forward.
+            While others showed up casually, I showed up like my life depended on it. I studied the hackathon theme weeks before it started. I read every piece of documentation I could find about Polygon. I watched every workshop recording from previous editions. By the time the hackathon kicked off, I wasn&apos;t an expert — but I was <span className="text-foreground font-medium">prepared</span>.
           </p>
 
-          <h2 className="text-xl font-heading text-foreground pt-4">The Moment</h2>
+          <h2 className="text-xl font-heading text-foreground pt-4">Volunteering for the Hard Work</h2>
           <p>
-            When they announced the winners, I genuinely thought they&apos;d made a mistake. My name. On the screen. <span className="text-foreground font-medium">Winner</span>. The judges said they were impressed by the clean code, the testing, and the fact that it actually worked end-to-end.
+            When teams were forming, I didn&apos;t sit back and wait to be picked. I actively volunteered — not for the easy tasks, but for the ones nobody else wanted. I took on the frontend work, the documentation, the testing, the demo preparation. Whatever the team needed, I raised my hand.
+          </p>
+
+          <p>
+            Some of my teammates had more experience with smart contracts, and I learned from them in real-time. But I also contributed where I could — grinding on the UI, making sure every user flow worked smoothly, writing clear documentation that would impress the judges. In a hackathon, the person who does the unglamorous work is often the one who makes the difference.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Learning Under Pressure</h2>
+          <p>
+            The hackathon was an intense crash course. I was learning Solidity concepts at 2 AM, implementing them at 3 AM, and debugging at 4 AM. Every hour was a mini-lesson. I asked questions constantly — to my teammates, to mentors, to anyone who would listen.
+          </p>
+
+          <p>
+            There were moments where I felt completely lost. Smart contract interactions that didn&apos;t make sense. Gas optimization techniques I&apos;d never heard of. But instead of pretending I understood, I admitted when I didn&apos;t know something and asked for help. That honesty made me a better team player and a faster learner.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Taking Every Task Seriously</h2>
+          <p>
+            One thing that set our team apart: we took <span className="text-foreground font-medium">every single task seriously</span>. While other teams focused only on the smart contract logic, we made sure the entire product was polished. The frontend was clean. The documentation was thorough. The demo was rehearsed multiple times. The pitch told a story.
+          </p>
+
+          <p>
+            I personally handled the presentation slides and helped structure our pitch narrative. I made sure we didn&apos;t just show <em>what</em> we built, but <em>why</em> it mattered and <em>how</em> it worked. Judges don&apos;t just evaluate code — they evaluate the complete package.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">Building a Working Product Together</h2>
+          <p>
+            The biggest advantage we had was <span className="text-foreground font-medium">teamwork</span>. We weren&apos;t a group of individuals working in silos — we were a unit. We communicated constantly, divided tasks based on strengths, helped each other debug, and made decisions together.
+          </p>
+
+          <p>
+            When someone got stuck on a smart contract function, we pair-coded through it. When the frontend wasn&apos;t connecting properly to the blockchain, we troubleshot as a group. That collaborative energy is what turns a good idea into a <span className="text-foreground font-medium">working product</span> — and working products win hackathons.
+          </p>
+
+          <h2 className="text-xl font-heading text-foreground pt-4">The Win</h2>
+          <p>
+            When they announced our team as the winners, I couldn&apos;t believe it. Not because I doubted our work — I knew we had given everything we had. But because just weeks before, I was a complete beginner who barely understood how smart contracts worked. And now I was standing on stage as a <span className="text-foreground font-medium">hackathon winner</span>.
+          </p>
+
+          <p>
+            That moment taught me something I carry to this day: <span className="text-foreground font-medium">you don&apos;t need to be the smartest person in the room. You just need to be the most dedicated.</span>
           </p>
 
           <h2 className="text-xl font-heading text-foreground pt-4">What I Learned</h2>
-          <ul className="space-y-2 pl-4">
-            <li className="flex items-start"><span className="text-accent mr-2">·</span>Scope down ruthlessly — a working MVP beats a broken ambitious project</li>
-            <li className="flex items-start"><span className="text-accent mr-2">·</span>Write tests — they save you when everything else is falling apart</li>
-            <li className="flex items-start"><span className="text-accent mr-2">·</span>Show up — half the battle is just registering and submitting</li>
-            <li className="flex items-start"><span className="text-accent mr-2">·</span>It&apos;s okay to feel like you don&apos;t belong — do it anyway</li>
+          <ul className="space-y-3 pl-4">
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Dedication beats experience</strong> — I was a beginner who outworked people with more skills</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Volunteer for the hard tasks</strong> — doing what nobody else wants to do makes you invaluable</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Learn in real-time</strong> — hackathons are the best classroom; embrace the pressure</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Ask for help</strong> — admitting you don&apos;t know something is a strength, not a weakness</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Polish the whole product</strong> — judges evaluate the complete experience, not just code</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Teamwork is everything</strong> — a great team with okay skills beats a solo genius every time</span></li>
+            <li className="flex items-start"><span className="text-accent mr-2">·</span><span><strong className="text-foreground">Show up determined</strong> — mindset is half the battle</span></li>
           </ul>
 
+          <div className="p-6 border border-theme rounded-xl bg-card mt-8">
+            <p className="text-foreground font-medium mb-2">💡 To anyone thinking about their first hackathon:</p>
+            <p>
+              You don&apos;t need years of experience. You don&apos;t need to know everything. You just need to show up with hunger, be willing to learn fast, do the work nobody else wants to do, and build as a team. That combination is more powerful than any technical skill.
+            </p>
+          </div>
+
           <p>
-            That first win gave me the confidence to keep building. Since then, I&apos;ve won <span className="text-foreground font-medium">5+ hackathons</span> across Wormhole, LayerZero, Base, Polygon, and Hyperliquid. But none of them felt quite like that first one.
+            Since that first Polygon hackathon, I&apos;ve gone on to win <span className="text-foreground font-medium">5+ more hackathons</span> — at{' '}
+            <Link href="https://x.com/Bernard_O1/status/1828832827594682687" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Wormhole</Link>,{' '}
+            <Link href="https://x.com/PrimordialAA/status/1993005650465767463" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">LayerZero</Link>,{' '}
+            <Link href="https://x.com/Bernard_O1/status/1988845679691608069" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Base</Link>,{' '}
+            <Link href="https://x.com/Bernard_O1/status/1990215252332384666" className="link-dotted text-foreground/90" target="_blank" rel="noopener noreferrer">Hyperliquid</Link>, and more. Each one taught me something new. But none of them hit quite like that first win. Because that was the moment I proved to myself that <span className="text-foreground font-medium">I belong here</span>.
           </p>
 
-          <p className="text-foreground/70 italic">
-            If you&apos;re thinking about entering your first hackathon — just do it. The worst that can happen is you learn something. The best? It changes your life.
+          <p className="text-foreground/70 italic text-lg">
+            &ldquo;You don&apos;t have to be great to start. But you have to start to be great.&rdquo;
           </p>
         </div>
       </FadeUp>
