@@ -19,6 +19,7 @@ The website follows a minimal, elegant design inspired by lifeofdanel.xyz with:
 - **Experience**: Timeline of roles with skills showcase
 - **Projects**: Featured and other projects from actual GitHub repositories
 - **Blog**: Placeholder for future content
+- **Speaking**: Placeh,older for future content
 - **Responsive**: Mobile-first design with hamburger navigation
 - **Accessibility**: Proper semantic HTML and ARIA labels
 
