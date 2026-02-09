@@ -101,6 +101,7 @@ const projects = [
     demo: null,
     featured: false,
     color: 'green',
+    logo: '/logos/hyperliquid.jpg',
     fallbackLetter: 'H',
   },
   {
