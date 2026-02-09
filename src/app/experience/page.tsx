@@ -98,11 +98,11 @@ const hackathons = [
     description: 'Created a DeFi application on Polygon with gas-optimized smart contracts',
   },
   {
-    name: 'Stacks Hackathon',
+    name: 'Hyperliquid Hackathon',
     result: '🏆 Winner',
-    protocol: 'Stacks',
-    protocolUrl: 'https://www.stacks.co/',
-    description: 'Built Bitcoin DeFi tooling on the Stacks ecosystem',
+    protocol: 'Hyperliquid',
+    protocolUrl: 'https://hyperliquid.xyz/',
+    description: 'Built high-performance trading tools on the Hyperliquid L1 chain',
   },
 ]
 
