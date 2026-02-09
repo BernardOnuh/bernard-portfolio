@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { FadeUp, FadeLeft, BlurFade, StaggerContainer, StaggerItem, RevealLine, ScaleUp, motion } from '@/components/motion'
 
 const experiences = [
   {
@@ -6,7 +9,6 @@ const experiences = [
     company: 'Web3Nova',
     companyUrl: '#',
     period: '2024 - Present',
-    type: 'work',
     description: [
       'Building blockchain products end-to-end — from smart contracts to full-stack dApps',
       'Shipped products processing 300+ transactions, serving 100+ users, and handling $20,000+ in volume',
@@ -19,7 +21,6 @@ const experiences = [
     company: 'Based West Africa',
     companyUrl: 'https://x.com/BasedWestAfrica',
     period: '2024 - Present',
-    type: 'work',
     description: [
       'Building and growing the Base blockchain ecosystem across West Africa',
       'Organizing community events, hackathons, and developer workshops',
@@ -32,7 +33,6 @@ const experiences = [
     company: 'Onchain Global',
     companyUrl: 'https://web.telegram.org/k/#@onchainbuilders',
     period: '2023 - Present',
-    type: 'work',
     description: [
       'Leading developer education initiatives — onboarded 200+ developers to blockchain',
       'Creating technical content, documentation, and workshop curricula',
@@ -45,7 +45,6 @@ const experiences = [
     company: 'Polygon Africa',
     companyUrl: 'https://polygon.technology/',
     period: '2021 - 2023',
-    type: 'work',
     description: [
       'Grew and managed Polygon developer communities across African markets',
       'Organized large-scale events, workshops, and educational programs',
@@ -58,7 +57,6 @@ const experiences = [
     company: 'Independent',
     companyUrl: null,
     period: '2022 - Present',
-    type: 'work',
     description: [
       'Built custom smart contracts, token systems, and DeFi protocols for clients',
       'Developed full-stack dApps with React/Next.js frontends and Solidity backends',
@@ -169,133 +167,235 @@ const freelanceProjects = [
   },
 ]
 
+const recognition = [
+  { name: 'Wormhole', url: 'https://wormhole.com/' },
+  { name: 'LayerZero', url: 'https://layerzero.network/' },
+  { name: 'Base', url: 'https://base.org/' },
+  { name: 'Polygon', url: 'https://polygon.technology/' },
+]
+
 export default function Experience() {
   return (
     <div className="max-w-2xl mx-auto px-4 py-16 md:py-24">
       <div className="space-y-16">
+        {/* Hero */}
         <div>
-          <h1 className="text-3xl md:text-4xl font-heading mb-3">Experience</h1>
-          <p className="text-muted text-lg leading-relaxed">
-            5 years of building products, winning hackathons, and growing communities in Web3.
-          </p>
+          <BlurFade>
+            <p className="text-accent text-sm font-medium tracking-wider uppercase mb-3">Career</p>
+          </BlurFade>
+          <FadeUp delay={0.1}>
+            <h1 className="text-3xl md:text-4xl font-heading mb-3">Experience</h1>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <p className="text-muted text-lg leading-relaxed">
+              5 years of building products, winning hackathons, and growing communities in Web3.
+            </p>
+          </FadeUp>
         </div>
 
         {/* Work Experience */}
         <div>
-          <h2 className="text-2xl font-heading text-foreground mb-8">Work</h2>
-          <div className="space-y-10">
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-2xl font-heading text-foreground">Work</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
+
+          <div className="space-y-10 relative">
+            {/* Animated timeline line */}
+            <motion.div
+              initial={{ height: 0 }}
+              whileInView={{ height: '100%' }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute left-0 top-0 w-[2px] bg-gradient-to-b from-accent via-accent/40 to-transparent"
+            />
+
             {experiences.map((exp, index) => (
-              <div key={index} className="border-l-2 border-accent/40 pl-6 hover:border-accent transition-colors duration-300">
-                <div className="mb-3">
-                  <h3 className="text-lg font-medium text-foreground">{exp.title}</h3>
-                  {exp.companyUrl ? (
-                    <Link href={exp.companyUrl} className="text-accent hover:text-accent-hover transition-colors text-sm" target="_blank" rel="noopener noreferrer">
-                      {exp.company} ↗
-                    </Link>
-                  ) : (
-                    <p className="text-accent text-sm">{exp.company}</p>
-                  )}
-                  <p className="text-xs text-muted mt-1">{exp.period}</p>
-                </div>
-                <ul className="space-y-1.5">
-                  {exp.description.map((item, i) => (
-                    <li key={i} className="text-muted text-sm leading-relaxed flex items-start">
-                      <span className="text-accent/60 mr-2 mt-0.5">·</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <FadeUp key={index} delay={index * 0.1}>
+                <motion.div
+                  whileHover={{ x: 6 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="pl-6 relative"
+                >
+                  {/* Timeline dot */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 + 0.2, type: 'spring', stiffness: 500 }}
+                    className="absolute left-[-4px] top-1.5 w-[10px] h-[10px] rounded-full bg-accent border-2 border-background"
+                    style={{ borderColor: 'var(--bg)' }}
+                  />
+
+                  <div className="mb-3">
+                    <h3 className="text-lg font-medium text-foreground">{exp.title}</h3>
+                    {exp.companyUrl ? (
+                      <Link href={exp.companyUrl} className="text-accent hover:text-accent-hover transition-colors text-sm" target="_blank" rel="noopener noreferrer">
+                        {exp.company} ↗
+                      </Link>
+                    ) : (
+                      <p className="text-accent text-sm">{exp.company}</p>
+                    )}
+                    <p className="text-xs text-muted mt-1">{exp.period}</p>
+                  </div>
+                  <ul className="space-y-1.5">
+                    {exp.description.map((item, i) => (
+                      <motion.li
+                        key={i}
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 + i * 0.05 + 0.3 }}
+                        className="text-muted text-sm leading-relaxed flex items-start"
+                      >
+                        <span className="text-accent/60 mr-2 mt-0.5">·</span>
+                        <span>{item}</span>
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </FadeUp>
             ))}
           </div>
         </div>
 
         {/* Hackathons */}
         <div>
-          <h2 className="text-2xl font-heading text-foreground mb-2">Hackathons</h2>
-          <p className="text-muted text-sm mb-8">5+ hackathons won. Recognized by leading blockchain protocols.</p>
-          <div className="space-y-4">
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl font-heading text-foreground">Hackathons</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
+          <FadeUp delay={0.1}>
+            <p className="text-muted text-sm mb-8">5+ hackathons won. Recognized by leading blockchain protocols.</p>
+          </FadeUp>
+
+          <StaggerContainer className="space-y-4" staggerDelay={0.1}>
             {hackathons.map((hack, index) => (
-              <div key={index} className="group p-5 border border-theme rounded-lg hover:border-accent/50 transition-all duration-300">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-1">
-                      <h3 className="text-base font-medium text-foreground group-hover:text-accent transition-colors">
-                        {hack.name}
-                      </h3>
-                      <span className="text-xs px-2 py-0.5 bg-accent/10 text-accent rounded-full font-medium">
-                        {hack.result}
-                      </span>
+              <StaggerItem key={index}>
+                <motion.div
+                  whileHover={{ scale: 1.015, x: 4 }}
+                  transition={{ type: 'spring', stiffness: 400 }}
+                  className="group p-5 border border-theme rounded-lg hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-1">
+                        <h3 className="text-base font-medium text-foreground group-hover:text-accent transition-colors">
+                          {hack.name}
+                        </h3>
+                        <motion.span
+                          initial={{ scale: 0 }}
+                          whileInView={{ scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 + 0.2, type: 'spring', stiffness: 500 }}
+                          className="text-xs px-2 py-0.5 bg-accent/10 text-accent rounded-full font-medium"
+                        >
+                          {hack.result}
+                        </motion.span>
+                      </div>
+                      <p className="text-muted text-sm leading-relaxed">{hack.description}</p>
                     </div>
-                    <p className="text-muted text-sm leading-relaxed">{hack.description}</p>
+                    <Link
+                      href={hack.protocolUrl}
+                      className="text-xs text-muted hover:text-accent transition-colors whitespace-nowrap"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {hack.protocol} ↗
+                    </Link>
                   </div>
-                  <Link
-                    href={hack.protocolUrl}
-                    className="text-xs text-muted hover:text-accent transition-colors whitespace-nowrap"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    {hack.protocol} ↗
-                  </Link>
-                </div>
-              </div>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Freelance Projects */}
         <div>
-          <h2 className="text-2xl font-heading text-foreground mb-2">Freelance Projects</h2>
-          <p className="text-muted text-sm mb-8">Selected client and personal projects shipped.</p>
-          <div className="space-y-6">
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-2">
+              <h2 className="text-2xl font-heading text-foreground">Freelance Projects</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
+          <FadeUp delay={0.1}>
+            <p className="text-muted text-sm mb-8">Selected client and personal projects shipped.</p>
+          </FadeUp>
+
+          <StaggerContainer className="space-y-6" staggerDelay={0.08}>
             {freelanceProjects.map((project, index) => (
-              <div key={index} className="group border-l-2 border-theme pl-6 hover:border-accent/50 transition-colors duration-300">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="text-base font-medium text-foreground group-hover:text-accent transition-colors">
-                    {project.name}
-                  </h3>
-                  {project.url && (
-                    <Link href={project.url} className="text-xs text-muted hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">
-                      ↗
-                    </Link>
-                  )}
-                </div>
-                <p className="text-muted text-sm leading-relaxed mb-2">{project.description}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {project.tech.map((t) => (
-                    <span key={t} className="text-xs px-2 py-0.5 bg-card border border-theme rounded-full text-muted">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <StaggerItem key={index}>
+                <motion.div
+                  whileHover={{ x: 6 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="group border-l-2 border-theme pl-6 hover:border-accent/50 transition-colors duration-300"
+                >
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-base font-medium text-foreground group-hover:text-accent transition-colors">
+                      {project.name}
+                    </h3>
+                    {project.url && (
+                      <Link href={project.url} className="text-xs text-muted hover:text-accent transition-colors" target="_blank" rel="noopener noreferrer">
+                        ↗
+                      </Link>
+                    )}
+                  </div>
+                  <p className="text-muted text-sm leading-relaxed mb-2">{project.description}</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {project.tech.map((t, i) => (
+                      <motion.span
+                        key={t}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.03 }}
+                        className="text-xs px-2 py-0.5 bg-card border border-theme rounded-full text-muted"
+                      >
+                        {t}
+                      </motion.span>
+                    ))}
+                  </div>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
 
         {/* Recognition */}
-        <div className="pt-8 border-t border-theme">
-          <h2 className="text-2xl font-heading text-foreground mb-6">Recognition</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              { name: 'Wormhole', url: 'https://wormhole.com/' },
-              { name: 'LayerZero', url: 'https://layerzero.network/' },
-              { name: 'Base', url: 'https://base.org/' },
-              { name: 'Polygon', url: 'https://polygon.technology/' },
-            ].map((org) => (
-              <Link
-                key={org.name}
-                href={org.url}
-                className="group p-4 border border-theme rounded-lg text-center hover:border-accent/50 transition-all duration-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <p className="text-foreground font-medium group-hover:text-accent transition-colors">{org.name}</p>
-                <p className="text-xs text-muted mt-1">Recognized Builder</p>
-              </Link>
-            ))}
+        <FadeUp>
+          <div className="pt-8 border-t border-theme">
+            <FadeLeft>
+              <div className="flex items-center gap-3 mb-6">
+                <h2 className="text-2xl font-heading text-foreground">Recognition</h2>
+                <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+              </div>
+            </FadeLeft>
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4" staggerDelay={0.1}>
+              {recognition.map((org) => (
+                <StaggerItem key={org.name}>
+                  <Link
+                    href={org.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.05, y: -4 }}
+                      transition={{ type: 'spring', stiffness: 400 }}
+                      className="group p-4 border border-theme rounded-lg text-center hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 transition-all duration-300"
+                    >
+                      <p className="text-foreground font-medium group-hover:text-accent transition-colors">{org.name}</p>
+                      <p className="text-xs text-muted mt-1">Recognized Builder</p>
+                    </motion.div>
+                  </Link>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
-        </div>
+        </FadeUp>
       </div>
     </div>
   )

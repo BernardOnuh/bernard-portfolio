@@ -1,4 +1,7 @@
+'use client'
+
 import Link from 'next/link'
+import { FadeUp, FadeLeft, BlurFade, StaggerContainer, StaggerItem, RevealLine, ScaleUp, motion } from '@/components/motion'
 
 const projects = [
   {
@@ -176,13 +179,24 @@ function FeaturedCard({ project, index }: { project: typeof projects[0]; index: 
   const colors = colorMap[project.color] || colorMap.cyan
 
   return (
-    <div
-      className={`group relative border border-theme rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl ${colors.border} ${colors.glow} hover:-translate-y-1`}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.6, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -4, scale: 1.01 }}
+      className={`group relative border border-theme rounded-2xl p-8 transition-all duration-500 hover:shadow-2xl ${colors.border} ${colors.glow}`}
     >
       {/* Number badge */}
-      <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-card border border-theme flex items-center justify-center text-xs font-mono text-muted">
+      <motion.div
+        initial={{ scale: 0, rotate: -180 }}
+        whileInView={{ scale: 1, rotate: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 + 0.3, type: 'spring', stiffness: 500 }}
+        className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-card border border-theme flex items-center justify-center text-xs font-mono text-muted"
+      >
         {String(index + 1).padStart(2, '0')}
-      </div>
+      </motion.div>
 
       <div className="space-y-5">
         {/* Header */}
@@ -251,17 +265,24 @@ function FeaturedCard({ project, index }: { project: typeof projects[0]; index: 
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
-function CompactCard({ project }: { project: typeof projects[0] }) {
+function CompactCard({ project, index }: { project: typeof projects[0]; index: number }) {
   const colors = colorMap[project.color] || colorMap.cyan
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 25, scale: 0.95 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: '-30px' }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: -3 }}
+    >
     <Link
       href={project.github}
-      className={`group relative block border border-theme rounded-xl p-5 transition-all duration-300 hover:shadow-lg ${colors.border} ${colors.glow} hover:-translate-y-0.5`}
+      className={`group relative block border border-theme rounded-xl p-5 transition-all duration-300 hover:shadow-lg ${colors.border} ${colors.glow}`}
       target="_blank"
       rel="noopener noreferrer"
     >
@@ -302,6 +323,7 @@ function CompactCard({ project }: { project: typeof projects[0] }) {
         </div>
       </div>
     </Link>
+    </motion.div>
   )
 }
 
@@ -314,34 +336,49 @@ export default function Projects() {
       <div className="space-y-16">
         {/* Hero */}
         <div>
-          <p className="text-accent text-sm font-medium tracking-wider uppercase mb-3">Portfolio</p>
-          <h1 className="text-3xl md:text-4xl font-heading mb-4">Projects</h1>
-          <p className="text-muted text-lg leading-relaxed max-w-xl">
-            Blockchain apps, smart contracts, and Web3 tools — built to solve real problems.
-          </p>
+          <BlurFade>
+            <p className="text-accent text-sm font-medium tracking-wider uppercase mb-3">Portfolio</p>
+          </BlurFade>
+          <FadeUp delay={0.1}>
+            <h1 className="text-3xl md:text-4xl font-heading mb-4">Projects</h1>
+          </FadeUp>
+          <FadeUp delay={0.2}>
+            <p className="text-muted text-lg leading-relaxed max-w-xl">
+              Blockchain apps, smart contracts, and Web3 tools — built to solve real problems.
+            </p>
+          </FadeUp>
           {/* Stats bar */}
-          <div className="flex gap-8 mt-6 pt-6 border-t border-theme">
-            <div>
-              <p className="text-2xl font-heading text-foreground">{projects.length}</p>
-              <p className="text-xs text-muted uppercase tracking-wide">Projects</p>
+          <FadeUp delay={0.3}>
+            <div className="flex gap-8 mt-6 pt-6 border-t border-theme">
+              {[
+                { value: projects.length, label: 'Projects' },
+                { value: featuredProjects.length, label: 'Featured' },
+                { value: '5+', label: 'Chains' },
+              ].map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.4 + i * 0.1 }}
+                  whileHover={{ y: -2 }}
+                >
+                  <p className="text-2xl font-heading text-foreground">{stat.value}</p>
+                  <p className="text-xs text-muted uppercase tracking-wide">{stat.label}</p>
+                </motion.div>
+              ))}
             </div>
-            <div>
-              <p className="text-2xl font-heading text-foreground">{featuredProjects.length}</p>
-              <p className="text-xs text-muted uppercase tracking-wide">Featured</p>
-            </div>
-            <div>
-              <p className="text-2xl font-heading text-foreground">5+</p>
-              <p className="text-xs text-muted uppercase tracking-wide">Chains</p>
-            </div>
-          </div>
+          </FadeUp>
         </div>
 
         {/* Featured */}
         <section>
-          <div className="flex items-center gap-3 mb-8">
-            <h2 className="text-xl font-heading text-foreground">Featured</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
-          </div>
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-xl font-heading text-foreground">Featured</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
           <div className="space-y-6">
             {featuredProjects.map((project, index) => (
               <FeaturedCard key={project.name} project={project} index={index} />
@@ -351,18 +388,21 @@ export default function Projects() {
 
         {/* Other Projects */}
         <section>
-          <div className="flex items-center gap-3 mb-8">
-            <h2 className="text-xl font-heading text-foreground">More Projects</h2>
-            <div className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
-          </div>
+          <FadeLeft>
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-xl font-heading text-foreground">More Projects</h2>
+              <RevealLine className="flex-1 h-px bg-gradient-to-r from-accent/30 to-transparent" />
+            </div>
+          </FadeLeft>
           <div className="grid gap-4 md:grid-cols-2">
-            {otherProjects.map((project) => (
-              <CompactCard key={project.name} project={project} />
+            {otherProjects.map((project, index) => (
+              <CompactCard key={project.name} project={project} index={index} />
             ))}
           </div>
         </section>
 
         {/* CTA */}
+        <ScaleUp>
         <div className="text-center pt-4">
           <Link
             href="https://github.com/BernardOnuh"
@@ -377,6 +417,7 @@ export default function Projects() {
             </svg>
           </Link>
         </div>
+        </ScaleUp>
       </div>
     </div>
   )
