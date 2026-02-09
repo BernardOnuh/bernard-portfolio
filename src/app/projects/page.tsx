@@ -35,7 +35,7 @@ const projects = [
     demo: 'https://stx-ramp.vercel.app',
     featured: true,
     color: 'orange',
-    logo: 'https://cryptologos.cc/logos/stacks-stx-logo.svg?v=040',
+    logo: '/logos/stacks.jpg',
     fallbackLetter: 'S',
   },
   {
@@ -68,6 +68,7 @@ const projects = [
     demo: null,
     featured: false,
     color: 'cyan',
+    logo: '/logos/futureedge.webp',
     fallbackLetter: 'F',
   },
   {
@@ -89,6 +90,7 @@ const projects = [
     demo: 'https://stxportfoliotracker.vercel.app',
     featured: false,
     color: 'purple',
+    logo: '/logos/stacks.jpg',
     fallbackLetter: 'P',
   },
   {
@@ -109,6 +111,7 @@ const projects = [
     demo: 'https://stacksend.xyz',
     featured: false,
     color: 'blue',
+    logo: '/logos/stacks.jpg',
     fallbackLetter: 'S',
   },
   {
@@ -119,6 +122,7 @@ const projects = [
     demo: 'https://stacksbridge.vercel.app',
     featured: false,
     color: 'cyan',
+    logo: '/logos/stacks.jpg',
     fallbackLetter: 'F',
   },
   {
@@ -129,6 +133,7 @@ const projects = [
     demo: 'https://stable-flow.vercel.app',
     featured: false,
     color: 'purple',
+    logo: '/logos/stacks.jpg',
     fallbackLetter: 'S',
   },
 ]
