@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description: 'Software Engineer building blockchain products and Developer Relations. 5 years shipping code and building communities across the African blockchain ecosystem.',
   keywords: ['Bernard Onuh', 'Software Engineer', 'Community Builder', 'Blockchain', 'Web3', 'Developer Relations'],
   authors: [{ name: 'Bernard Onuh' }],
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Bernard Onuh — Software Engineer & Community Builder',
     description: 'Software Engineer building blockchain products. 5 years shipping code across the African blockchain ecosystem.',

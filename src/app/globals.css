@@ -35,6 +35,27 @@
   }
 }
 
+@media print {
+  nav, footer, .print\:hidden {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: #0a0a0a !important;
+    font-size: 11px !important;
+  }
+  * {
+    color: #0a0a0a !important;
+    border-color: #e5e5e5 !important;
+  }
+  .text-accent, [class*="text-accent"] {
+    color: #0891B2 !important;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
+
 @layer components {
   .accent-glow {
     @apply font-semibold;

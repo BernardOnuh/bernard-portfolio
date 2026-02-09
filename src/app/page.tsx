@@ -17,7 +17,7 @@ const socials = [
   { name: 'YouTube', href: 'https://www.youtube.com/@Bernard_O1' },
   { name: 'LinkedIn', href: 'https://linkedin.com/in/bernardonuh' },
   { name: 'Telegram', href: 'https://t.me/bernardonuh' },
-  { name: 'Resume', href: '#' },
+  { name: 'Resume', href: '/resume' },
 ]
 
 export default function Home() {
