@@ -24,7 +24,7 @@ const projects = [
     demo: '#',
     featured: true,
     color: 'purple',
-    logo: 'https://raw.githubusercontent.com/BernardOnuh/Bizflip-Frontend/main/public/favicon.ico',
+    logo: '/logos/bizflip.webp',
     fallbackLetter: 'B',
   },
   {
