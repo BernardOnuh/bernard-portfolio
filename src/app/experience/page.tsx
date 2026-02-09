@@ -108,10 +108,28 @@ const hackathons = [
 
 const freelanceProjects = [
   {
+    name: 'Bizflip',
+    description: 'Decentralized business marketplace with smart contract escrow for buying, selling, and flipping digital businesses securely onchain.',
+    tech: ['Next.js', 'Solidity', 'Smart Contracts', 'Web3'],
+    url: 'https://github.com/BernardOnuh/Bizflip-Frontend',
+  },
+  {
     name: 'Aboki.xyz',
     description: 'Crypto exchange platform — complete V1 to V2 frontend revamp. Rebuilt the entire UI for a smoother, faster trading experience with real-time rates.',
     tech: ['TypeScript', 'Next.js', 'Tailwind', 'Web3'],
     url: 'https://github.com/BernardOnuh/Aboki-V2-Frontend',
+  },
+  {
+    name: 'Future Edge',
+    description: 'Telegram trading bot for automated crypto trading strategies with real-time market analysis and portfolio tracking.',
+    tech: ['Python', 'Telegram Bot API', 'Trading', 'DeFi'],
+    url: 'https://github.com/BernardOnuh/futureTg',
+  },
+  {
+    name: 'Refuel Bot',
+    description: 'Automated Telegram bot for DeFi operations — gas refueling, token swaps, and streamlined portfolio management.',
+    tech: ['TypeScript', 'Telegram Bot API', 'DeFi'],
+    url: 'https://github.com/BernardOnuh/Hurryfibot',
   },
   {
     name: 'LinguaLink',
