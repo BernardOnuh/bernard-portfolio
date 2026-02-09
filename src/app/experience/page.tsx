@@ -108,34 +108,46 @@ const hackathons = [
 
 const freelanceProjects = [
   {
+    name: 'Aboki.xyz',
+    description: 'Crypto exchange platform — complete V1 to V2 frontend revamp. Rebuilt the entire UI for a smoother, faster trading experience with real-time rates.',
+    tech: ['TypeScript', 'Next.js', 'Tailwind', 'Web3'],
+    url: 'https://github.com/BernardOnuh/Aboki-V2-Frontend',
+  },
+  {
+    name: 'LinguaLink',
+    description: 'AI-powered language translation and learning platform. Built the full-stack frontend with real-time translation and multi-language support.',
+    tech: ['TypeScript', 'Next.js', 'AI/ML', 'Tailwind'],
+    url: 'https://github.com/BernardOnuh/LinguaLink-New',
+  },
+  {
+    name: 'AfriMobile',
+    description: 'Mobile-first platform connecting African users to digital services. Built the database layer and backend infrastructure.',
+    tech: ['JavaScript', 'Node.js', 'MongoDB', 'REST API'],
+    url: 'https://github.com/BernardOnuh/Afrimo-Database',
+  },
+  {
     name: 'STX Ramp',
-    description: 'On-ramp/off-ramp platform for STX and USDC to Nigerian Naira. Handled $20,000+ in volume with 300+ transactions.',
-    tech: ['Next.js', 'Stacks.js', 'Clarity', 'Tailwind'],
+    description: 'On-ramp/off-ramp platform for STX and USDC to Nigerian Naira. Processed $20,000+ in volume with 300+ transactions and 100+ users.',
+    tech: ['TypeScript', 'Stacks.js', 'Clarity', 'Next.js'],
     url: 'https://github.com/BernardOnuh/stx-ramp',
   },
   {
-    name: 'Cross-Chain Token Bridge',
-    description: 'Built a token bridge enabling seamless asset transfers between Ethereum and Polygon with optimized gas fees.',
-    tech: ['Solidity', 'Hardhat', 'React', 'Ethers.js'],
-    url: null,
+    name: 'StableFlow',
+    description: 'Stablecoin payment flow protocol with documentation site. Enabling seamless stablecoin transfers and merchant integrations.',
+    tech: ['JavaScript', 'React', 'Solidity', 'MDX'],
+    url: 'https://github.com/BernardOnuh/stableflow',
   },
   {
-    name: 'NFT Marketplace',
-    description: 'Full-stack NFT marketplace with minting, listing, auction, and royalty features for an African art collective.',
-    tech: ['Solidity', 'Next.js', 'IPFS', 'The Graph'],
-    url: null,
+    name: 'STX Portfolio Tracker',
+    description: 'Web app and Chrome extension on Stacks blockchain. Connect wallets, monitor multiple STX addresses, track balances and portfolio value in real-time.',
+    tech: ['JavaScript', 'Stacks API', 'Chrome Extension', 'React'],
+    url: 'https://github.com/BernardOnuh/STX-Portfolio-Tracker',
   },
   {
-    name: 'DAO Governance Platform',
-    description: 'Custom governance platform with proposal creation, token-weighted voting, and treasury management.',
-    tech: ['Solidity', 'React', 'Snapshot', 'Safe'],
-    url: null,
-  },
-  {
-    name: 'DeFi Yield Aggregator',
-    description: 'Automated yield optimization protocol that routes funds to the highest-yielding strategies across multiple protocols.',
-    tech: ['Solidity', 'Foundry', 'Next.js', 'Alchemy'],
-    url: null,
+    name: 'StackSend',
+    description: 'Multisend dApp on Stacks network — batch-send STX or tokens to multiple addresses in a single transaction, saving time and fees.',
+    tech: ['TypeScript', 'Clarity', 'Stacks.js', 'Next.js'],
+    url: 'https://github.com/BernardOnuh/stacksend',
   },
 ]
 
