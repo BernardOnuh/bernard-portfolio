@@ -10,14 +10,14 @@ const experiences = [
     description: [
       'Building blockchain products end-to-end — from smart contracts to full-stack dApps',
       'Shipped products processing 300+ transactions, serving 100+ users, and handling $20,000+ in volume',
-      'Developing on-ramp/off-ramp solutions (STX/USDC ↔ NGN) for the African market',
+      'Developing on-ramp/off-ramp solutions (USDC ↔ NGN) for the African market',
       'Leading a team of developers building across multiple EVM chains',
     ],
   },
   {
     title: 'Community Builder & DevRel',
     company: 'Based West Africa',
-    companyUrl: 'https://basedwestafrica.com/',
+    companyUrl: 'https://x.com/BasedWestAfrica',
     period: '2024 - Present',
     type: 'work',
     description: [
@@ -30,7 +30,7 @@ const experiences = [
   {
     title: 'Developer Advocate',
     company: 'Onchain Global',
-    companyUrl: 'https://onchainglobal.com/',
+    companyUrl: 'https://web.telegram.org/k/#@onchainbuilders',
     period: '2023 - Present',
     type: 'work',
     description: [
@@ -73,35 +73,35 @@ const hackathons = [
     name: 'Wormhole Hackathon',
     result: '🏆 Winner',
     protocol: 'Wormhole',
-    protocolUrl: 'https://wormhole.com/',
+    protocolUrl: 'https://x.com/Bernard_O1/status/1828832827594682687',
     description: 'Built a cross-chain application leveraging Wormhole\'s messaging protocol',
   },
   {
     name: 'LayerZero Hackathon',
     result: '🏆 Winner',
     protocol: 'LayerZero',
-    protocolUrl: 'https://layerzero.network/',
+    protocolUrl: 'https://x.com/PrimordialAA/status/1993005650465767463',
     description: 'Developed an omnichain solution using LayerZero\'s interoperability framework',
   },
   {
     name: 'Base Buildathon',
     result: '🏆 Winner',
     protocol: 'Base',
-    protocolUrl: 'https://base.org/',
+    protocolUrl: 'https://x.com/Bernard_O1/status/1988845679691608069',
     description: 'Shipped a consumer-facing dApp on Base with real transaction volume',
   },
   {
     name: 'Polygon BUIDL IT',
     result: '🏆 Winner',
     protocol: 'Polygon',
-    protocolUrl: 'https://polygon.technology/',
+    protocolUrl: 'https://x.com/Bernard_O1/status/1609842862060888064',
     description: 'Created a DeFi application on Polygon with gas-optimized smart contracts',
   },
   {
     name: 'Hyperliquid Hackathon',
     result: '🏆 Winner',
     protocol: 'Hyperliquid',
-    protocolUrl: 'https://hyperliquid.xyz/',
+    protocolUrl: 'https://x.com/Bernard_O1/status/1990215252332384666',
     description: 'Built high-performance trading tools on the Hyperliquid L1 chain',
   },
 ]
