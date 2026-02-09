@@ -21,7 +21,17 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 navbar-blur border-b border-theme">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link href="/" className="font-semibold text-lg text-foreground hover:text-accent transition-colors">
+          <Link href="/" className="font-semibold text-lg text-foreground hover:text-accent transition-colors inline-flex items-center gap-2">
+            <svg viewBox="0 0 32 32" className="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="nav-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{ stopColor: '#06B6D4' }} />
+                  <stop offset="100%" style={{ stopColor: '#0891B2' }} />
+                </linearGradient>
+              </defs>
+              <rect width="32" height="32" rx="8" fill="url(#nav-bg)" />
+              <text x="16" y="22" fontFamily="system-ui,-apple-system,sans-serif" fontSize="16" fontWeight="700" fill="white" textAnchor="middle">BO</text>
+            </svg>
             Bernard Onuh
           </Link>
 

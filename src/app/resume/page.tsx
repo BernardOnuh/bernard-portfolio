@@ -36,7 +36,19 @@ export default function Resume() {
         {/* Header */}
         <FadeUp>
           <div className="text-center pb-6 border-b border-theme print:pb-4">
-            <h1 className="text-3xl md:text-4xl font-heading mb-2 print:text-2xl">Bernard Onuh</h1>
+            <div className="flex items-center justify-center gap-3 mb-2">
+              <svg viewBox="0 0 32 32" className="w-10 h-10 shrink-0 print:w-8 print:h-8" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="resume-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#06B6D4' }} />
+                    <stop offset="100%" style={{ stopColor: '#0891B2' }} />
+                  </linearGradient>
+                </defs>
+                <rect width="32" height="32" rx="8" fill="url(#resume-bg)" />
+                <text x="16" y="22" fontFamily="system-ui,-apple-system,sans-serif" fontSize="16" fontWeight="700" fill="white" textAnchor="middle">BO</text>
+              </svg>
+              <h1 className="text-3xl md:text-4xl font-heading print:text-2xl">Bernard Onuh</h1>
+            </div>
             <p className="text-accent text-lg font-medium mb-3 print:text-base">Software Engineer · Developer Relations · Community Builder</p>
             <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-muted print:text-xs">
               <span>📍 Nigeria</span>
