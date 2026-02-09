@@ -57,7 +57,7 @@ const projects = [
     demo: '#',
     featured: true,
     color: 'green',
-    logo: 'https://raw.githubusercontent.com/BernardOnuh/LinguaLink-New/main/public/favicon.ico',
+    logo: '/logos/lingualink.webp',
     fallbackLetter: 'L',
   },
   {
