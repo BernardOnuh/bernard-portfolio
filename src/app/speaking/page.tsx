@@ -349,19 +349,32 @@ export default function Speaking() {
                       </div>
                     </div>
                     <p className="text-muted text-sm leading-relaxed">{talk.description}</p>
-                    {talk.youtube && (
+                    <div className="flex items-center gap-4 mt-3">
                       <Link
-                        href={talk.youtube}
-                        className="inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 transition-colors mt-3"
+                        href={talk.link}
+                        className="inline-flex items-center gap-1.5 text-xs text-accent hover:text-accent/80 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                         </svg>
-                        Watch on YouTube
+                        View on Web3Nova
                       </Link>
-                    )}
+                      {talk.youtube && (
+                        <Link
+                          href={talk.youtube}
+                          className="inline-flex items-center gap-1.5 text-xs text-red-400 hover:text-red-300 transition-colors"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                          </svg>
+                          Watch on YouTube
+                        </Link>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               </FadeUp>
