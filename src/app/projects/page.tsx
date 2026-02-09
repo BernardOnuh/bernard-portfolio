@@ -133,7 +133,7 @@ const projects = [
     demo: 'https://stable-flow.vercel.app',
     featured: false,
     color: 'purple',
-    logo: '/logos/stacks.jpg',
+    logo: '/logos/usdc.png',
     fallbackLetter: 'S',
   },
 ]
