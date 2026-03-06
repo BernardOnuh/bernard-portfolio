@@ -5,6 +5,19 @@ import { FadeUp, FadeLeft, BlurFade, StaggerContainer, StaggerItem, RevealLine, 
 
 const posts = [
   {
+    slug: 'finding-my-purpose',
+    title: 'Finding My Purpose',
+    excerpt: 'From dabbling in Forex and Crypto trading in 2021 to founding Web3Nova and building blockchain products. I feel stuck now — but I believe the breakthrough is coming. This is the honest truth about where I am.',
+    date: 'March 2026',
+    readTime: '8 min read',
+    category: 'Reflections',
+    emoji: '🧭',
+    color: 'from-purple-500/20 to-indigo-500/20',
+    borderColor: 'hover:border-purple-500/50',
+    tagColor: 'bg-purple-500/10 text-purple-400 border-purple-500/20',
+    featured: true,
+  },
+  {
     slug: 'how-i-won-my-first-hackathon',
     title: 'How I Won My First Hackathon',
     excerpt: 'From nervously submitting my first project to standing on stage as a winner — the sleepless nights, the pivots, the lessons, and the moment everything clicked. Here\'s what nobody tells you about hackathons.',
