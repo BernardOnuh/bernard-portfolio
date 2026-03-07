@@ -1,50 +1,38 @@
 import { MetadataRoute } from 'next'
 
+const siteUrl = 'https://www.bernardblockchain.xyz'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = 'https://www.bernardblockchain.xyz'
+  const pages = [
+    { path: '', priority: 1.0 },
+    { path: '/about', priority: 0.9 },
+    { path: '/experience', priority: 0.8 },
+    { path: '/projects', priority: 0.8 },
+    { path: '/blog', priority: 0.9 },
+    { path: '/speaking', priority: 0.7 },
+    { path: '/resume', priority: 0.7 },
+  ]
+
+  const blogPosts = [
+    { slug: 'finding-my-purpose', date: '2026-03-06' },
+    { slug: 'how-i-won-my-first-hackathon', date: '2026-02-10' },
+    { slug: 'my-first-tech-event', date: '2026-02-10' },
+    { slug: 'first-freelance-job', date: '2026-02-10' },
+    { slug: 'contributing-to-ecosystems', date: '2026-02-10' },
+  ]
 
   return [
-    {
-      url: siteUrl,
+    ...pages.map(({ path, priority }) => ({
+      url: `${siteUrl}${path}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 1,
-    },
-    {
-      url: `${siteUrl}/about`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/experience`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/projects`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/speaking`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly' as const,
+      priority,
+    })),
+    ...blogPosts.map(({ slug, date }) => ({
+      url: `${siteUrl}/blog/${slug}`,
+      lastModified: new Date(date),
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/resume`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
+    })),
   ]
 }

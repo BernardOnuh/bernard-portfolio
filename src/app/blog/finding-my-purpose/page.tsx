@@ -4,7 +4,21 @@ import Link from 'next/link'
 import { FadeUp, BlurFade, motion } from '@/components/motion'
 
 export default function Post() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'Finding My Purpose',
+    description: 'From dabbling in Forex and Crypto trading to founding Web3Nova and building blockchain products.',
+    author: { '@type': 'Person', name: 'Bernard Onuh', url: 'https://www.bernardblockchain.xyz' },
+    datePublished: '2026-03-06',
+    dateModified: '2026-03-06',
+    url: 'https://www.bernardblockchain.xyz/blog/finding-my-purpose',
+    publisher: { '@type': 'Person', name: 'Bernard Onuh' },
+  }
+
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     <article className="max-w-2xl mx-auto px-4 py-16 md:py-24">
       <BlurFade>
         <Link href="/blog" className="text-sm text-muted hover:text-accent transition-colors mb-8 inline-flex items-center gap-1">
@@ -143,5 +157,6 @@ export default function Post() {
         </div>
       </FadeUp>
     </article>
+    </>
   )
 }
