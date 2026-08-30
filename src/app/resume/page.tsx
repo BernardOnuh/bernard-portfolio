@@ -74,6 +74,29 @@ export default function Resume() {
           </section>
         </FadeUp>
 
+        {/* Education */}
+        <FadeUp delay={0.08}>
+          <section className="p-4 border-2 border-accent/40 rounded-xl bg-accent/5 print:p-3 print:border">
+            <h2 className="text-lg font-heading mb-4 uppercase tracking-wider text-accent print:text-sm print:mb-3">Education</h2>
+            <div className="space-y-4 print:space-y-2">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-base font-medium text-foreground print:text-sm">Bachelor of Technology, Software Engineering — Second Class Upper</h3>
+                  <p className="text-sm text-muted print:text-xs">Federal University of Technology Akure (FUTA)</p>
+                </div>
+                <p className="text-xs text-muted shrink-0">2019 – 2025</p>
+              </div>
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-base font-medium text-foreground print:text-sm">Web3 & Blockchain Certifications</h3>
+                  <p className="text-sm text-muted print:text-xs">Polygon · Cyfrin Updraft · Alchemy University · The Nirvana Academy</p>
+                </div>
+                <p className="text-xs text-muted shrink-0">2021 – Present</p>
+              </div>
+            </div>
+          </section>
+        </FadeUp>
+
         {/* Experience */}
         <FadeUp delay={0.1}>
           <section>
@@ -247,29 +270,6 @@ export default function Resume() {
               <div>
                 <h4 className="text-sm font-medium text-foreground mb-2 print:text-xs">Community & DevRel</h4>
                 <p className="text-sm text-muted print:text-xs">Developer Relations · Community Building · Technical Writing · Public Speaking · Workshop Facilitation · Developer Onboarding · Content Creation</p>
-              </div>
-            </div>
-          </section>
-        </FadeUp>
-
-        {/* Education */}
-        <FadeUp delay={0.3}>
-          <section>
-            <h2 className="text-lg font-heading mb-4 uppercase tracking-wider text-accent print:text-sm print:mb-3">Education</h2>
-            <div className="space-y-4 print:space-y-2">
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-base font-medium text-foreground print:text-sm">Bachelor of Technology, Software Engineering — Second Class Upper</h3>
-                  <p className="text-sm text-muted print:text-xs">Federal University of Technology Akure (FUTA)</p>
-                </div>
-                <p className="text-xs text-muted shrink-0">2019 – 2025</p>
-              </div>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-base font-medium text-foreground print:text-sm">Web3 & Blockchain Certifications</h3>
-                  <p className="text-sm text-muted print:text-xs">Polygon · Cyfrin Updraft · Alchemy University · The Nirvana Academy</p>
-                </div>
-                <p className="text-xs text-muted shrink-0">2021 – Present</p>
               </div>
             </div>
           </section>
