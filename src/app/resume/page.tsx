@@ -69,7 +69,7 @@ export default function Resume() {
           <section>
             <h2 className="text-lg font-heading text-foreground mb-3 uppercase tracking-wider text-accent print:text-sm">Summary</h2>
             <p className="text-muted text-[15px] leading-relaxed print:text-xs print:leading-relaxed">
-              Software Engineer with 5+ years of experience building blockchain products, leading developer communities, and shipping Web3 applications across multiple ecosystems. Won 5+ hackathons (Wormhole, LayerZero, Base, Polygon, Hyperliquid). Onboarded 200+ developers to blockchain. Organized 8+ events with 500+ attendees through Web3Nova. Proven track record of shipping products that process real transactions and serve real users.
+              Software Engineer with 5+ years of experience building blockchain products, leading developer communities, and shipping Web3 applications across multiple ecosystems. Won 5+ hackathons (Wormhole, LayerZero, Base, Polygon, Hyperliquid). Onboarded 200+ developers to blockchain and 20+ businesses onto Biziq. Organized 8+ events with 500+ attendees through Web3Nova. Proven track record of shipping products that process real transactions and serve real users.
             </p>
           </section>
         </FadeUp>
@@ -79,6 +79,20 @@ export default function Resume() {
           <section>
             <h2 className="text-lg font-heading mb-4 uppercase tracking-wider text-accent print:text-sm print:mb-3">Experience</h2>
             <div className="space-y-6 print:space-y-4">
+              <div>
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="text-base font-medium text-foreground print:text-sm">Founder & Builder</h3>
+                    <p className="text-sm text-accent print:text-xs">Biziq</p>
+                  </div>
+                  <p className="text-xs text-muted shrink-0">2026 – Present</p>
+                </div>
+                <ul className="mt-2 space-y-1 text-muted text-sm print:text-xs">
+                  <li className="flex items-start"><span className="text-accent mr-2">·</span>Built and launched biziq.online, a platform helping businesses go online and manage operations</li>
+                  <li className="flex items-start"><span className="text-accent mr-2">·</span>Onboarded 20+ businesses onto the platform</li>
+                </ul>
+              </div>
+
               <div>
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -172,12 +186,30 @@ export default function Resume() {
           </section>
         </FadeUp>
 
+        {/* Awards */}
+        <FadeUp delay={0.18}>
+          <section>
+            <h2 className="text-lg font-heading mb-4 uppercase tracking-wider text-accent print:text-sm print:mb-3">Awards</h2>
+            <div className="grid grid-cols-2 gap-3 print:grid-cols-2 print:gap-2">
+              <div className="p-3 border border-theme rounded-lg text-center print:p-2">
+                <p className="text-sm font-medium text-foreground print:text-xs">🥇 Tech Rookie of the Year</p>
+                <p className="text-xs text-muted mt-1 print:text-[10px]">FUTA · Year 3</p>
+              </div>
+              <div className="p-3 border border-theme rounded-lg text-center print:p-2">
+                <p className="text-sm font-medium text-foreground print:text-xs">🏆 Techie of the Year</p>
+                <p className="text-xs text-muted mt-1 print:text-[10px]">FUTA · Year 4</p>
+              </div>
+            </div>
+          </section>
+        </FadeUp>
+
         {/* Projects */}
         <FadeUp delay={0.2}>
           <section>
             <h2 className="text-lg font-heading mb-4 uppercase tracking-wider text-accent print:text-sm print:mb-3">Key Projects</h2>
             <div className="grid gap-4 md:grid-cols-2 print:grid-cols-2 print:gap-2">
               {[
+                { name: 'Biziq', desc: 'Platform helping businesses go online — 20+ businesses onboarded', tech: 'Next.js · TypeScript' },
                 { name: 'Aboki', desc: 'Crypto-to-fiat platform — V1→V2 frontend revamp', tech: 'Next.js · TypeScript · DeFi' },
                 { name: 'Bizflip', desc: 'Decentralized business marketplace with smart contract escrow', tech: 'Next.js · Solidity · Web3' },
                 { name: 'STX Ramp', desc: 'STX/USDC ↔ NGN on-ramp/off-ramp — $20K+ volume', tech: 'TypeScript · Stacks · Clarity' },
@@ -227,10 +259,10 @@ export default function Resume() {
             <div className="space-y-4 print:space-y-2">
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <h3 className="text-base font-medium text-foreground print:text-sm">Bachelor of Technology, Software Engineering</h3>
+                  <h3 className="text-base font-medium text-foreground print:text-sm">Bachelor of Technology, Software Engineering — Second Class Upper</h3>
                   <p className="text-sm text-muted print:text-xs">Federal University of Technology Akure (FUTA)</p>
                 </div>
-                <p className="text-xs text-muted shrink-0">2019 – 2024</p>
+                <p className="text-xs text-muted shrink-0">2019 – 2025</p>
               </div>
               <div className="flex items-start justify-between gap-4">
                 <div>
