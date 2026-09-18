@@ -5,6 +5,19 @@ import { FadeUp, FadeLeft, BlurFade, StaggerContainer, StaggerItem, RevealLine, 
 
 const posts = [
   {
+    slug: 'finding-my-purpose-2',
+    title: 'I Didn\'t Find My Purpose. I Built It.',
+    excerpt: 'Six months ago I promised an update on the breakthrough. Here it is: I stopped waiting and started building. The purpose I was searching for was Web3Nova all along. Part 2 of Finding My Purpose.',
+    date: 'September 2026',
+    readTime: '9 min read',
+    category: 'Reflections',
+    emoji: '🔥',
+    color: 'from-orange-500/20 to-red-500/20',
+    borderColor: 'hover:border-orange-500/50',
+    tagColor: 'bg-orange-500/10 text-orange-400 border-orange-500/20',
+    featured: true,
+  },
+  {
     slug: 'finding-my-purpose',
     title: 'Finding My Purpose',
     excerpt: 'From dabbling in Forex and Crypto trading in 2021 to founding Web3Nova and building blockchain products. I feel stuck now — but I believe the breakthrough is coming. This is the honest truth about where I am.',

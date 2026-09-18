@@ -128,7 +128,7 @@ export default function Post() {
               I&apos;m writing this in March 2026. I will come back — months from now — to update this post. Either with the story of the breakthrough, or with the lessons from the struggle. Either way, I&apos;ll be honest. That&apos;s the only way this means anything.
             </p>
             <p className="text-sm mt-3 text-muted">
-              <em>Last updated: March 2026</em>
+              <em>Update (September 2026): I kept that promise. Read <Link href="/blog/finding-my-purpose-2" className="text-accent hover:underline font-medium">Part 2 — I Didn&apos;t Find My Purpose. I Built It.</Link></em>
             </p>
           </div>
 
