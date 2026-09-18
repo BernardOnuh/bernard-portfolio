@@ -111,6 +111,12 @@ export default function Post() {
             And this is just one of many. The fruits are still on the tree.
           </p>
           <p>
+            Around the same time, another one of my people messaged me, buzzing with a number I&apos;ll never forget: his first <span className="text-foreground font-medium">half a million Naira (about $600) of the year</span>, earned through consistent trial, through not giving up when it wasn&apos;t working yet. He kept building, kept failing forward, kept showing up. And then it broke through.
+          </p>
+          <p>
+            <span className="text-foreground font-medium">That was proof to me that we can&apos;t stop here.</span> Not while people are this close to their own breakthroughs. Not while the fruits are still on the tree.
+          </p>
+          <p>
             That&apos;s when it all made sense. The purpose I was confused about for months was never a mystery  it was unfolding right in front of me the whole time. Not as a title. Not as a job offer. <span className="text-foreground font-medium">As people.</span>
           </p>
 
